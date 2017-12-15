@@ -1,5 +1,5 @@
 /*
- * code.ino : code pour l'esp32
+ * programme.ino : code complet pour l'esp32
  * 
  * par Philippe Loctaux
  * par Yann Le Guehennec
