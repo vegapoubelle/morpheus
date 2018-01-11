@@ -19,9 +19,11 @@
   *  1. Métaux
   *       oui: dans le bac métal
   *  2. Rigidité
-  *       si oui et poids > valeur: dans le bac verre
-  *       si oui et poids < valeur: dans le bac plastique
-  *       non: 
-  *  
+  *       si oui:
+  *		poids +- valeur: dans le bac verre
+  *		poids +- valeur: dans le bac plastique
+  *       si non:
+  *		poids +- valeur: dans le bac plastique
+  *		poids +- valeur: dans le bac autre
   *  
   */
