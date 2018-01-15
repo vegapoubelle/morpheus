@@ -7,3 +7,5 @@
  * https://github.com/vegapoubelle
  * 
  */
+
+/* vim: set tabstop=2: */

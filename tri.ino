@@ -27,3 +27,5 @@
   *		poids +- valeur: dans le bac autre
   *  
   */
+
+/* vim: set tabstop=2: */
