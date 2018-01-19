@@ -1,6 +1,6 @@
 /* note: il faut installer les bibliotheques
    https://github.com/adafruit/Adafruit-GFX-Library
-   https://github.com/adafruit/Adafruit_SSD1306
+   https://github.com/vegapoubelle/Adafruit_SSD1306
 */
 
 #include <SPI.h>
@@ -29,6 +29,10 @@ void setup()   {
   display.setTextColor(WHITE);
   display.println("poubelle.online");
   display.display();
+}
+
+void loop() {
+  /* empty atm */
 }
 
 /* vim: set tabstop=2: */
