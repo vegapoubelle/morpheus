@@ -6,9 +6,11 @@
  */
 
 void setup() {
-  ;
+  //
 }
 
 void loop() {
-  ;
+  //
 }
+
+/* vim: set tabstop=2: */
