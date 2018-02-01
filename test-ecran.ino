@@ -22,16 +22,18 @@ void setup()   {
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
   display.clearDisplay();
-
-  display.setCursor(0, 0);
-  display.setTextSize(1);
-  display.setTextColor(WHITE);
-  display.println("poubelle.online");
-  display.display();
 }
 
 void loop() {
   /* empty atm */
+}
+
+void display_text() { 
+  display.setCursor(0,0);
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.println("poubelle.online");
+  display.display();
 }
 
 /* vim: set tabstop=2: */
