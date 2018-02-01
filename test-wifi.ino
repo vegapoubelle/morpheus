@@ -12,7 +12,7 @@ const char* w_psw = "pssw";
 
 void setup() {
   Serial.begin(9600);
-  Wifi.begin(w_net, w_psw);
+  WiFi.begin(w_net, w_psw);
 
 
   while (Wifi.status() != WL_CONNECTED) {
