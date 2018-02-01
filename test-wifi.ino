@@ -15,7 +15,7 @@ void setup() {
   WiFi.begin(w_net, w_psw);
 
 
-  while (Wifi.status() != WL_CONNECTED) {
+  while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.println("connexion au wifi.......");
   }
