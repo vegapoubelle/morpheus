@@ -20,7 +20,7 @@ void setup() {
     Serial.println("connexion au wifi.......");
   }
 
-  Serial.println("connexion établie");
+  Serial.println("connexion etablie");
 }
 
 void loop() {
