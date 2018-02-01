@@ -22,6 +22,8 @@ void setup()   {
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
   display.clearDisplay();
+
+  display_text();
 }
 
 void loop() {
@@ -32,7 +34,7 @@ void display_text() {
   display.setCursor(0,0);
   display.setTextSize(1);
   display.setTextColor(WHITE);
-  display.println("poubelle.online");
+  display.println("www.poubelle.online");
   display.display();
 }
 
