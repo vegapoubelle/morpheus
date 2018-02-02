@@ -38,6 +38,38 @@ void setup() {
 
   /* setup the tls certificate */
   client.setCACert(cert);
+
+
+  Serial.println("connexion au server sur le port 443");
+  if (!client.connect(server, 443)) {
+    Serial.println(":(");
+  } else {
+    Serial.println(":)");
+    /* create HTTPS request */
+    client.println("GET https://poubelle.online");
+    client.println("Host: poubelle.online");
+    client.println("Connection: close");
+    client.println();
+
+    Serial.print("en attente d'une reponse");
+    while (!client.available()) {
+      delay(50);
+      Serial.print(".");
+    }
+
+    /* if data is available then receive and print to Terminal */
+    while (client.available()) {
+      char c = client.read();
+      Serial.write(c);
+    }
+
+    /* if the server disconnected, stop the client */
+    if (!client.connected()) {
+      Serial.println();
+      Serial.println("Server disconnected");
+      client.stop();
+    }
+  }
 }
 
 void loop() {
