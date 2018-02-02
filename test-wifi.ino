@@ -81,7 +81,7 @@ void setup() {
   } else {
     Serial.println(":)");
     /* create HTTPS request */
-    client.println("GET https://poubelle.online HTTP/1.0");
+    client.println("GET https://poubelle.online/ HTTP/1.0");
     client.println("Host: poubelle.online");
     client.println("Connection: close");
     client.println();
