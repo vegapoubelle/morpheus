@@ -14,7 +14,6 @@ void setup() {
   Serial.begin(9600);
   WiFi.begin(w_net, w_psw);
 
-
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.println("connexion au wifi.......");
@@ -27,4 +26,4 @@ void loop() {
   //
 }
 
-/* vim: set tabstop=2: */
+/* vim: set ts=2 sw=2 sts=2 et : */
