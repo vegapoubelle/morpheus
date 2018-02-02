@@ -11,16 +11,33 @@ const char* network = "ssid";
 const char* password = "pssw";
 const char* server = "poubelle.online";
 
+/* tls certificate:
+ *
+ * linux: install `openssl`
+ * windows: check online `openssl client windows`
+ */
+const char* cert =\
+"cert goes here\n" \
+"multiple lines are done like that\n";
+
+/* make an instance of WiFiClientSecure */
+WiFiClientSecure client;
+
 void setup() {
   Serial.begin(9600);
   WiFi.begin(network, password);
 
+  /* waiting for wifi to connect */
   while (WiFi.status() != WL_CONNECTED) {
+    Serial.print(".");
     delay(500);
-    Serial.println("connexion au wifi.......");
   }
 
-  Serial.println("connexion etablie");
+  Serial.print("connexion etablie au reseau: ");
+  Serial.println(network);
+
+  /* setup the tls certificate */
+  client.setCACert(cert);
 }
 
 void loop() {
