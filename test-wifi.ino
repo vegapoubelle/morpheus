@@ -7,12 +7,13 @@
 
 #include <WiFi.h>
 
-const char* w_net = "ssid";
-const char* w_psw = "pssw";
+const char* network = "ssid";
+const char* password = "pssw";
+const char* server = "poubelle.online";
 
 void setup() {
   Serial.begin(9600);
-  WiFi.begin(w_net, w_psw);
+  WiFi.begin(network, password);
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
