@@ -3,6 +3,7 @@
  * 
  * http://poubelle.online
  * https://goo.gl/6rx6EG
+ * https://github.com/copercini/esp32-iot-examples/blob/master/ESP32_aws_iot/ESP32_aws_iot.ino
  */
 
 #include <WiFi.h>
