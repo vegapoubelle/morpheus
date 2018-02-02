@@ -4,6 +4,7 @@
  * http://poubelle.online
  * https://goo.gl/6rx6EG
  * https://github.com/copercini/esp32-iot-examples/blob/master/ESP32_aws_iot/ESP32_aws_iot.ino
+ * https://techtutorialsx.com/2017/11/18/esp32-arduino-https-get-request/
  */
 
 #include <WiFi.h>
