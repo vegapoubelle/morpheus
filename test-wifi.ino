@@ -13,10 +13,15 @@
 const char* ssid     = "phil's phone";
 const char* password = "mechkeyb";
 const char* host = "poubelle.online";
+const int httpPort = 80;
 String url = "/test.txt";
 
 void setup() {
   Serial.begin(9600);
+
+  /* wait for garbage to go away */
+  delay(500);
+  Serial.println("");
 
   /* connecting to wifi */
   WiFi.begin(ssid, password);
@@ -27,6 +32,7 @@ void setup() {
     Serial.print(".");
   }
 
+  Serial.println("");
   Serial.print("up: ");
   Serial.print(ssid);
   Serial.print(" @ ");
@@ -41,7 +47,6 @@ void setup() {
 
   /* create tcp connexion */
   WiFiClient client;
-  const int httpPort = 80;
   if (!client.connect(host, httpPort)) {
     Serial.println("connection failed");
     return;
