@@ -1,9 +1,11 @@
 /*
- *  This sketch sends data via HTTP GET requests to data.sparkfun.com service.
- *
- *  You need to get streamId and privateKey at data.sparkfun.com and paste them
- *  below. Or just customize this script to talk to other HTTP servers.
- *
+ * test-wifi: test du wifi pour l'esp32
+ * 
+ * http://poubelle.online
+ * https://goo.gl/6rx6EG
+ * https://github.com/copercini/esp32-iot-examples/blob/master/ESP32_aws_iot/ESP32_aws_iot.ino
+ * https://techtutorialsx.com/2017/11/18/esp32-arduino-https-get-request/
+ * https://techtutorialsx.com/2017/05/19/esp32-http-get-requests/
  */
 
 #include <WiFi.h>
