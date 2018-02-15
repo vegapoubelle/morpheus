@@ -34,9 +34,9 @@ void setup() {
 
   Serial.println("");
   Serial.print("up: ");
-  Serial.println(WiFi.localIP());
+  Serial.print(WiFi.localIP());
   Serial.print(" @ ");
-  Serial.print(ssid);
+  Serial.println(ssid);
 
 
   /* you can loop that shit here if you want */ 
