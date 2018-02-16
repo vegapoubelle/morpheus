@@ -37,14 +37,8 @@ void setup() {
   Serial.print(WiFi.localIP());
   Serial.print(" @ ");
   Serial.println(ssid);
-}
 
-void loop() {
-  /* empty loop */
-}
-
-void download() {
-  /* function to download shit from the server */
+  /* connect to the server */
   Serial.print("connecting to ");
   Serial.println(host);
 
@@ -55,10 +49,38 @@ void download() {
     return;
   }
 
+  Serial.println("connected!");
+
+  /* PUSH SHIT 
+    !!!!!!!!!!!!!!!!!!!!!  */
+
+  int data = 42;
+
+  if (client.connect(host,httpPort)) { 
+    client.println("POST /add.php HTTP/1.1"); 
+    client.print("Host: ");
+    client.println(host);
+    client.println("Content-Type: application/x-www-form-urlencoded"); 
+    client.print("Content-Length: "); 
+    client.println(data); 
+  } 
+
+  if (client.connected()) { 
+    client.stop();
+  }
+}
+
+void loop() {
+  /* empty loop */
+}
+
+  /* DOWNLOAD SHIT
+   * !!!!!!!!!!!!! 
+
   Serial.print("Requesting URL: ");
   Serial.println(url);
 
-  /* request url to host */
+  // request url to host 
   client.print(String("GET ") + url + " HTTP/1.1\r\n" +
       "Host: " + host + "\r\n" +
       "Connection: close\r\n\r\n");
@@ -71,7 +93,7 @@ void download() {
     }
   }
 
-  /* read reply and print to serial */
+  // read reply and print to serial 
   while(client.available()) {
     String line = client.readStringUntil('\r');
     Serial.print(line);
@@ -79,11 +101,9 @@ void download() {
 
   Serial.println();
   Serial.println("closing connection");
-}
 
-void push() {
- /* function for pushing shit to the server */
-}
+  **** END TO DOWNLOAD SHIT */
+
 
 /* vim: set ts=2 sw=2 et : */
 
