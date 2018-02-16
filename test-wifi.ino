@@ -37,11 +37,13 @@ void setup() {
   Serial.print(WiFi.localIP());
   Serial.print(" @ ");
   Serial.println(ssid);
+}
 
+void loop() {
+  /* empty loop */
+}
 
-  /* you can loop that shit here if you want */ 
-  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
+void download() {
   Serial.print("connecting to ");
   Serial.println(host);
 
@@ -76,10 +78,6 @@ void setup() {
 
   Serial.println();
   Serial.println("closing connection");
-}
-
-void loop() {
-  /* empty loop */
 }
 
 /* vim: set ts=2 sw=2 et : */
