@@ -44,6 +44,7 @@ void loop() {
 }
 
 void download() {
+  /* function to download shit from the server */
   Serial.print("connecting to ");
   Serial.println(host);
 
@@ -78,6 +79,10 @@ void download() {
 
   Serial.println();
   Serial.println("closing connection");
+}
+
+void push() {
+ /* function for pushing shit to the server */
 }
 
 /* vim: set ts=2 sw=2 et : */
