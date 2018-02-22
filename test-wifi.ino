@@ -57,16 +57,18 @@ void setup() {
   int data = 42;
 
   if (client.connect(host,httpPort)) { 
-    client.println("POST /add.php HTTP/1.1"); 
+    client.println("POST /add.php HTTP/1.1");
     client.print("Host: ");
     client.println(host);
-    client.println("Content-Type: application/x-www-form-urlencoded"); 
-    client.print("Content-Length: "); 
-    client.println(data); 
+    client.println("Content-Type: application/x-www-form-urlencoded");
+    client.print("Content-Length: ");
+    client.println(data);
+    Serial.println("data sent");
   } 
 
   if (client.connected()) { 
     client.stop();
+    Serial.println("wifi client stopped");
   }
 }
 
