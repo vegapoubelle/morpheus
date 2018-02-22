@@ -46,7 +46,6 @@ void setup() {
     Serial.println("connection failed");
     return;
   }
-
   Serial.println("connected!");
 
   if (client.connected()) { 
