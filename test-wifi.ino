@@ -13,8 +13,6 @@
 const char* ssid     = "phil's phone";
 const char* password = "mechkeyb";
 const char* host = "poubelle.online";
-const int httpPort = 80;
-String url = "/test.txt";
 
 void setup() {
   Serial.begin(9600);
@@ -51,21 +49,6 @@ void setup() {
 
   Serial.println("connected!");
 
-  /* PUSH SHIT 
-    !!!!!!!!!!!!!!!!!!!!!  */
-
-  int data = 42;
-
-  if (client.connect(host,httpPort)) { 
-    client.println("POST /add.php HTTP/1.1");
-    client.print("Host: ");
-    client.println(host);
-    client.println("Content-Type: application/x-www-form-urlencoded");
-    client.print("Content-Length: ");
-    client.println(data);
-    Serial.println("data sent");
-  } 
-
   if (client.connected()) { 
     client.stop();
     Serial.println("wifi client stopped");
@@ -75,37 +58,6 @@ void setup() {
 void loop() {
   /* empty loop */
 }
-
-  /* DOWNLOAD SHIT
-   * !!!!!!!!!!!!! 
-
-  Serial.print("Requesting URL: ");
-  Serial.println(url);
-
-  // request url to host 
-  client.print(String("GET ") + url + " HTTP/1.1\r\n" +
-      "Host: " + host + "\r\n" +
-      "Connection: close\r\n\r\n");
-  unsigned long timeout = millis();
-  while (client.available() == 0) {
-    if (millis() - timeout > 5000) {
-      Serial.println(">>> Client Timeout !");
-      client.stop();
-      return;
-    }
-  }
-
-  // read reply and print to serial 
-  while(client.available()) {
-    String line = client.readStringUntil('\r');
-    Serial.print(line);
-  }
-
-  Serial.println();
-  Serial.println("closing connection");
-
-  **** END TO DOWNLOAD SHIT */
-
 
 /* vim: set ts=2 sw=2 et : */
 
