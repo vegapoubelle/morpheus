@@ -13,6 +13,8 @@
 const char* ssid     = "phil's phone";
 const char* password = "mechkeyb";
 const char* host = "poubelle.online";
+const int port = 80;
+int masse = 42; // test value
 
 void setup() {
   Serial.begin(9600);
@@ -36,18 +38,40 @@ void setup() {
   Serial.print(" @ ");
   Serial.println(ssid);
 
-  /* connect to the server */
-  Serial.print("connecting to ");
-  Serial.println(host);
+  /******************** send stuff to the server */
 
-  /* create tcp connexion */
+  /* connection to the server */
   WiFiClient client;
-  if (!client.connect(host, httpPort)) {
-    Serial.println("connection failed");
-    return;
-  }
-  Serial.println("connected!");
+  if (client.connect(host, port)) {
+    /* message that we are connecting to the sever */
+    Serial.print("connecting to ");
+    Serial.println(host);
 
+    /* send the http get request */
+    client.print("GET /add.php?");
+
+    /* send the value of 'masse' */
+    client.print("masse=");
+    client.print(masse);
+
+    /* specify http spec version */
+    client.println(" HTTP/1.1");
+
+    /* put the host and the port */
+    client.print("Host:");
+    client.print(host);
+    client.print(":");
+    client.println(port);
+
+    /* message to say success! */
+    Serial.println("success!");
+  } else {
+    /* if the conneciton failed */
+    Serial.println("connection failed");
+    client.stop();
+  }
+
+  /* once the stuff has been sent, stop the wifi client */
   if (client.connected()) { 
     client.stop();
     Serial.println("wifi client stopped");
