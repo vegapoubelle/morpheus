@@ -14,7 +14,7 @@ const char* ssid     = "phil's phone";
 const char* password = "mechkeyb";
 const char* host = "poubelle.online";
 const int port = 80;
-int masse = 42; // test value
+int masse = random(300);
 
 void setup() {
   Serial.begin(9600);
@@ -49,6 +49,8 @@ void loop() {
     /* message that we are connecting to the sever */
     Serial.print("connecting to ");
     Serial.println(host);
+    masse = random(300);
+    Serial.println(masse);
 
     /* send the http get request */
     client.print("GET /add.php?");
