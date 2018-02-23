@@ -38,6 +38,9 @@ void setup() {
   Serial.print(" @ ");
   Serial.println(ssid);
 
+}
+
+void loop() {
   /******************** send stuff to the server */
 
   /* connection to the server */
@@ -63,6 +66,11 @@ void setup() {
     client.print(":");
     client.println(port);
 
+    /* finish the http request */
+    client.println("User-Agent: poubelle-wifi");
+    client.println("Connection: close");
+    client.println();
+
     /* message to say success! */
     Serial.println("success!");
   } else {
@@ -76,10 +84,8 @@ void setup() {
     client.stop();
     Serial.println("wifi client stopped");
   }
-}
 
-void loop() {
-  /* empty loop */
+  delay(5000);
 }
 
 /* vim: set ts=2 sw=2 et : */
