@@ -53,7 +53,7 @@ void loop() {
     Serial.println(masse);
 
     /* send the http get request */
-    client.print("GET /add.php?");
+    client.print("GET /index.php?");
 
     /* send the value of 'masse' */
     client.print("masse=");
