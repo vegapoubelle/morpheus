@@ -100,7 +100,7 @@ void loop() {
     Serial.println("");
   }
 
-  delay(5000);
+  delay(500);
 }
 
 /* vim: set ts=2 sw=2 et : */
