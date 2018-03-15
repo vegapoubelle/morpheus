@@ -76,8 +76,6 @@ void loop() {
     client.println("Connection: close");
     client.println();
 
-    delay(1000);
-
     /* message to say success! */
     Serial.println("success!");
 
@@ -87,10 +85,12 @@ void loop() {
     client.stop();
   }
 
+  /* debug: get reply from the server
   while(client.available()) {
     char c = client.read();
     Serial.print(c);
   }
+  */
 
   /* once the stuff has been sent, stop the wifi client */
   if (client.connected()) {
