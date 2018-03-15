@@ -37,12 +37,9 @@ void setup() {
   Serial.print(WiFi.localIP());
   Serial.print(" @ ");
   Serial.println(ssid);
-
 }
 
 void loop() {
-  /******************** send stuff to the server */
-
   /* connection to the server */
   WiFiClient client;
   if (client.connect(host, port)) {
