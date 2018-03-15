@@ -69,7 +69,7 @@ void loop() {
     client.println(port);
 
     /* finish the http request */
-    client.println("User-Agent: ESP32");
+    client.println("User-Agent: esp32-poubelle");
     client.println("Connection: close");
     client.println();
 
