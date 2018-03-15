@@ -82,6 +82,7 @@ void loop() {
   } else {
     /* if the conneciton failed */
     Serial.println("connection failed");
+    Serial.println("");
     client.stop();
   }
 
@@ -96,6 +97,7 @@ void loop() {
   if (client.connected()) {
     client.stop();
     Serial.println("wifi client stopped");
+    Serial.println("");
   }
 
   delay(5000);
