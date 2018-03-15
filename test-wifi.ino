@@ -12,7 +12,7 @@
 
 const char* ssid     = "phil's phone";
 const char* password = "mechkeyb";
-const char* host = "51.254.143.230";
+const char* host = "poubelle.online";
 const int port = 80;
 int masse = random(300);
 
@@ -49,7 +49,10 @@ void loop() {
     /* message that we are connecting to the sever */
     Serial.print("connecting to ");
     Serial.println(host);
+
+    /* debug shit */
     masse = random(300);
+    Serial.print("debug: ");
     Serial.println(masse);
 
     /* send the http get request */
@@ -69,20 +72,28 @@ void loop() {
     client.println(port);
 
     /* finish the http request */
-    client.println("User-Agent: poubelle-wifi");
+    client.println("User-Agent: ESP32");
     client.println("Connection: close");
     client.println();
 
+    delay(1000);
+
     /* message to say success! */
     Serial.println("success!");
+
   } else {
     /* if the conneciton failed */
     Serial.println("connection failed");
     client.stop();
   }
 
+  while(client.available()) {
+    char c = client.read();
+    Serial.print(c);
+  }
+
   /* once the stuff has been sent, stop the wifi client */
-  if (client.connected()) { 
+  if (client.connected()) {
     client.stop();
     Serial.println("wifi client stopped");
   }
