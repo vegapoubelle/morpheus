@@ -20,6 +20,8 @@ void setup() {
   /* define the led and turn it off */
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, LOW);
+
+  /* start the serial display */
   Serial.begin(9600);
 
   /* wait for garbage to go away */
