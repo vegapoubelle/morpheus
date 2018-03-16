@@ -14,7 +14,7 @@ const char* ssid     = "phil's phone";
 const char* password = "mechkeyb";
 const char* host = "poubelle.online";
 const int port = 80;
-int masse = random(300);
+int masse;
 
 void setup() {
   Serial.begin(9600);
