@@ -49,7 +49,7 @@ void loop() {
     Serial.print("connecting to ");
     Serial.println(host);
 
-    /* debug shit */
+    /* debug messages */
     masse = random(300);
     Serial.print("debug: ");
     Serial.println(masse);
