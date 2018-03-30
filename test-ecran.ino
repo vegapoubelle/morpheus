@@ -8,7 +8,7 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-String codename = "MMMA";
+String codename = "Morpheus";
 String version = "0.0.1";
 
 #define OLED_RESET 4
