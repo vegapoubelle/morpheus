@@ -8,9 +8,6 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
-String codename = "Morpheus";
-String version = "0.0.1";
-
 #define OLED_RESET 4
 Adafruit_SSD1306 display(OLED_RESET);
 
@@ -104,7 +101,8 @@ void setup()   {
   display.clearDisplay();
 
   /* display_text(text, line, column, size) */
-  display_text("www.poubelle.online", 30, 0, 1);
+  display_text("projet Morepheus", 25, 0, 1);
+  display_text("version 0.0.1", 25, 0, 1);
 }
 
 void loop() {
