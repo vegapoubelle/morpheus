@@ -8,6 +8,9 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 
+String codename = "MMMA";
+String version = "0.0.1";
+
 #define OLED_RESET 4
 Adafruit_SSD1306 display(OLED_RESET);
 
