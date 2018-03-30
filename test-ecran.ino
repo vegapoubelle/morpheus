@@ -101,14 +101,14 @@ void setup()   {
   display.clearDisplay();
 
   /* display_text(line, column, size, text); */
-  display_text(30, 0, 1, "www.poubelle.online");
+  display_text("www.poubelle.online", 30, 0, 1);
 }
 
 void loop() {
   /* empty atm */
 }
 
-void display_text(int line, int column, int size, String text) {
+void display_text(String text, int line, int column, int size) {
   display.setCursor(column, line);
   display.setTextSize(size);
   display.setTextColor(WHITE);
