@@ -102,7 +102,7 @@ void setup()   {
 
   /* display_text(text, line, column, size) */
   display_text("projet Morepheus", 25, 0, 1);
-  display_text("version 0.0.1", 25, 0, 1);
+  display_text("version 0.0.1", 35, 0, 1);
 }
 
 void loop() {
