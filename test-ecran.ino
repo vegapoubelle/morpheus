@@ -100,7 +100,7 @@ void setup()   {
 
   display.clearDisplay();
 
-  /* display_text(line, column, size, text); */
+  /* display_text(text, line, column, size) */
   display_text("www.poubelle.online", 30, 0, 1);
 }
 
