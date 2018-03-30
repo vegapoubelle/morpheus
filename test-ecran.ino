@@ -96,7 +96,7 @@ void setup()   {
   /* drawBitmap(x, y, bitmap data, width, height, color) */
   display.drawBitmap(0, 0, logo, LOGO_WIDTH, LOGO_HEIGHT, WHITE);
   display.display();
-  delay(2000);
+  delay(5000);
 
   display.clearDisplay();
 
