@@ -101,7 +101,7 @@ void setup()   {
   display.clearDisplay();
 
   /* display_text(text, line, column, size) */
-  display_text("projet Morpheus", 25, 0, 1);
+  display_text("projet morpheus", 25, 0, 1);
   display_text("version 0.0.1", 35, 0, 1);
 }
 
