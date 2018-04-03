@@ -9,10 +9,11 @@
 */
 
 
-/* Liste de truc a trier :
- *  * métaux
- *  * poids
- *  * rigidité
+/* Liste de trucs a trier :
+
+    * métaux
+    * poids
+    * rigidité
 
 
     étapes de tri:
