@@ -16,10 +16,6 @@ const int port = 80;
 int masse;
 
 void setup() {
-  /* define the led and turn it off */
-  pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, LOW);
-
   /* start the serial display */
   Serial.begin(9600);
 
@@ -79,11 +75,6 @@ void loop() {
 
     /* message to say success! */
     Serial.println("success!");
-
-    /* blink the led */
-    digitalWrite(LED_BUILTIN, HIGH);
-    delay(100);
-    digitalWrite(LED_BUILTIN, LOW);
 
   } else {
     /* if the conneciton failed */
