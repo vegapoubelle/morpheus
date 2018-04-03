@@ -1,11 +1,11 @@
 /*
- * wifi.ino : gestion du wifi 
- * 
- * par Philippe Loctaux (x4m3)
- * 
- * http://poubelle.online
- * 
- */
+   wifi.ino : gestion du wifi
+
+   par Philippe Loctaux (x4m3)
+
+   http://poubelle.online
+
+*/
 
 #include <WiFi.h>
 
@@ -72,10 +72,10 @@ void connect_server() {
   }
 
   /* debug: get reply from the server
-  while(client.available()) {
+    while(client.available()) {
     char c = client.read();
     Serial.print(c);
-  }
+    }
   */
 
   /* once the stuff has been sent, stop the wifi client */

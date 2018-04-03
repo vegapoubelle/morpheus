@@ -1,9 +1,9 @@
 /*
- * morpheus.ino : empty for now
- * 
- * http://poubelle.online
- * 
- */
+   morpheus.ino : empty for now
+
+   http://poubelle.online
+
+*/
 
 /* maybe handle the version of the program here? */
 

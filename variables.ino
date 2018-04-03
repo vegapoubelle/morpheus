@@ -1,9 +1,9 @@
 /*
- * variables.ino: declaration des variables
- * 
- * http://poubelle.online
- * 
- */
+   variables.ino: declaration des variables
+
+   http://poubelle.online
+
+*/
 
 /* wifi */
 const char* ssid     = "phil's phone";

@@ -1,9 +1,9 @@
 /*
- * loop.ino : la fonction qui tourne à ∞
- * 
- * http://poubelle.online
- * 
- */
+   loop.ino : la fonction qui tourne à ∞
+
+   http://poubelle.online
+
+*/
 
 void loop() {
 
