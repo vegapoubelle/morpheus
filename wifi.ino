@@ -34,14 +34,15 @@ void connect_server() {
   /* connection to the server */
   WiFiClient client;
   if (client.connect(host, port)) {
-    /* message that we are connecting to the server */
-    Serial.print("connecting to ");
-    Serial.println(host);
+    /* message that we are sending stuff to the server */
+    Serial.println("wifi: the following data will be sent:");
+    Serial.println("**************************************");
 
-    /* debug messages */
+    /* print variables that we wanna send to the server */
     masse = random(300);
-    Serial.print("debug: ");
+    Serial.print("masse: ");
     Serial.println(masse);
+    Serial.println("**************************************");
 
     /* send the http get request */
     client.print("GET /php/add.php?");
@@ -65,11 +66,13 @@ void connect_server() {
     client.println();
 
     /* message to say success! */
-    Serial.println("success!");
+    Serial.println("wifi: information sent to the server !");
 
   } else {
     /* if the conneciton failed */
-    Serial.println("connection failed");
+    Serial.println("wifi: connection failed to the server");
+    Serial.println("wifi: if you lost your wifi network, please reboot the device");
+    Serial.println("wifi: you also may wanna check if the server is not offline");
     Serial.println("");
     client.stop();
   }
