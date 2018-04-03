@@ -19,7 +19,6 @@ void setup() {
 
   /******************** wifi */
   connect_wifi();
-  connect_server();
 }
 
 /* vim: set ts=2 sw=2 et : */
