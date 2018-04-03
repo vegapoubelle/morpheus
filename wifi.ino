@@ -23,27 +23,14 @@ void setup() {
   delay(500);
   Serial.println("");
 
-  /* connecting to wifi */
-  WiFi.begin(ssid, password);
-
-  /* waiting for wifi to connect */
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-
-  Serial.println("");
-  Serial.print("up: ");
-  Serial.print(WiFi.localIP());
-  Serial.print(" @ ");
-  Serial.println(ssid);
+  connect_wifi();
 }
 
-void loop() {
+void connect_server() {
   /* connection to the server */
   WiFiClient client;
   if (client.connect(host, port)) {
-    /* message that we are connecting to the sever */
+    /* message that we are connecting to the server */
     Serial.print("connecting to ");
     Serial.println(host);
 
@@ -96,8 +83,24 @@ void loop() {
     Serial.println("wifi client stopped");
     Serial.println("");
   }
+}
 
-  delay(1000);
+void connect_wifi() {
+  /* connecting to wifi */
+  WiFi.begin(ssid, password);
+
+  /* waiting for wifi to connect */
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+
+  /* display ip and ssid of current network */
+  Serial.println("");
+  Serial.print("up: ");
+  Serial.print(WiFi.localIP());
+  Serial.print(" @ ");
+  Serial.println(ssid);
 }
 
 /* vim: set ts=2 sw=2 et : */
