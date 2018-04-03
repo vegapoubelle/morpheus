@@ -95,6 +95,14 @@ void setup()   {
   /* generate the high voltage from the 3.3v line internally */
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
+  splash_logo_text();
+}
+
+void loop() {
+  /* empty atm */
+}
+
+void splash_logo_text() {
   display.clearDisplay();
 
   /* drawBitmap(x, y, bitmap data, width, height, color) */
@@ -107,10 +115,6 @@ void setup()   {
   /* display_text(text, line, column, size) */
   display_text("projet morpheus", 25, 0, 1);
   display_text("version 0.0.1", 35, 0, 1);
-}
-
-void loop() {
-  /* empty atm */
 }
 
 void display_text(String text, int line, int column, int size) {
