@@ -7,12 +7,6 @@
  * 
  */
 
-const char* ssid     = "phil's phone";
-const char* password = "mechkeyb";
-const char* host = "poubelle.online";
-const int port = 80;
-int masse;
-
 void connect_server() {
   /* connection to the server */
   WiFiClient client;
