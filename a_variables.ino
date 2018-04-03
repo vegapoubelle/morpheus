@@ -1,5 +1,5 @@
 /*
-   variables.ino: declaration des variables
+   a_variables.ino: declaration des variables
 
    http://poubelle.online
 

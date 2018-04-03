@@ -1,5 +1,5 @@
 /*
-   loop.ino : la fonction qui tourne à ∞
+   c_loop.ino : la fonction qui tourne à ∞
 
    http://poubelle.online
 

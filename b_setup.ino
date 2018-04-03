@@ -1,5 +1,5 @@
 /*
-   setup.ino : la fonction setup
+   b_setup.ino : la fonction setup
 
    http://poubelle.online
 
