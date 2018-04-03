@@ -4,6 +4,14 @@ le programme de la poubelle pour l'esp32
 
 [http://poubelle.online](http://poubelle.online)
 
+## bibliothèques
+
+https://github.com/espressif/arduino-esp32/
+
+### écran
+* https://github.com/adafruit/Adafruit-GFX-Library
+* https://github.com/vegapoubelle/Adafruit_SSD1306
+
 ## l'équipe
 
 | [@bideabiere](https://github.com/bideabiere) | [@darkbenjo](https://github.com/darkbenjo) | [@Guehendek](https://github.com/Guehendek) | [@x4m3](https://github.com/x4m3) |
