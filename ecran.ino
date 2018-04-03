@@ -92,21 +92,26 @@ const unsigned char logo [] PROGMEM = {
 void init_display() {
   /* generate the high voltage from the 3.3v line internally */
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  Serial.println("lcd: started");
 }
 
 void splash_logo_text() {
   display.clearDisplay();
+  Serial.println("lcd: cleared");
 
   /* drawBitmap(x, y, bitmap data, width, height, color) */
   display.drawBitmap(0, 0, logo, LOGO_WIDTH, LOGO_HEIGHT, WHITE);
   display.display();
+  Serial.println("lcd: vega poubelle logo displayed");
   delay(2500);
 
   display.clearDisplay();
+  Serial.println("lcd: cleared");
 
   /* display_text(text, line, column, size) */
   display_text("projet morpheus", 25, 0, 1);
   display_text("version 0.0.1", 35, 0, 1);
+  Serial.println("lcd: text displayed");
 }
 
 void display_text(String text, int line, int column, int size) {
