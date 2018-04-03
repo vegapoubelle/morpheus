@@ -14,16 +14,19 @@ void connect_wifi() {
   WiFi.begin(ssid, password);
 
   /* waiting for wifi to connect */
+  Serial.print("wifi: connecting to network");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
 
   /* display ip and ssid of current network */
-  Serial.println("");
-  Serial.print("up: ");
-  Serial.print(WiFi.localIP());
-  Serial.print(" @ ");
+  Serial.println(" connected!");
+
+  Serial.print("wifi: ip address: ");
+  Serial.println(WiFi.localIP());
+
+  Serial.print("wifi: network ssid: ");
   Serial.println(ssid);
 }
 
