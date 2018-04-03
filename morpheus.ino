@@ -1,9 +1,10 @@
-void setup() {
+/*
+ * morpheus.ino : empty for now
+ * 
+ * http://poubelle.online
+ * 
+ */
 
-}
-
-void loop() {
-
-}
+/* maybe handle the version of the program here? */
 
 /* vim: set ts=2 sw=2 et : */
