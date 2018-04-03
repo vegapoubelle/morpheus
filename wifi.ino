@@ -7,6 +7,8 @@
  * 
  */
 
+#include <WiFi.h>
+
 void connect_wifi() {
   /* connecting to wifi */
   WiFi.begin(ssid, password);
