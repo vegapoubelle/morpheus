@@ -84,6 +84,9 @@ void connect_server() {
     Serial.println("wifi client stopped");
     Serial.println("");
   }
+
+  delay(3000);
+
 }
 
 /* vim: set ts=2 sw=2 et : */
