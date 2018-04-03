@@ -87,7 +87,7 @@ void connect_server() {
   /* once the stuff has been sent, stop the wifi client */
   if (client.connected()) {
     client.stop();
-    Serial.println("wifi client stopped");
+    Serial.println("wifi: client stopped");
     Serial.println("");
   }
 
