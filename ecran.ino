@@ -7,11 +7,6 @@
  * 
  */
 
-#include <SPI.h>
-#include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-
 #define OLED_RESET 4
 Adafruit_SSD1306 display(OLED_RESET);
 
@@ -88,19 +83,6 @@ const unsigned char logo [] PROGMEM = {
 #if (SSD1306_LCDHEIGHT != 64)
 #error("Height incorrect, please fix Adafruit_SSD1306.h!");
 #endif
-
-void setup()   {
-  Serial.begin(9600);
-
-  /* generate the high voltage from the 3.3v line internally */
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-
-  splash_logo_text();
-}
-
-void loop() {
-  /* empty atm */
-}
 
 void splash_logo_text() {
   display.clearDisplay();

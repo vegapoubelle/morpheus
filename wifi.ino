@@ -7,25 +7,11 @@
  * 
  */
 
-#include <WiFi.h>
-
 const char* ssid     = "phil's phone";
 const char* password = "mechkeyb";
 const char* host = "poubelle.online";
 const int port = 80;
 int masse;
-
-void setup() {
-  /* start the serial display */
-  Serial.begin(9600);
-
-  /* wait for garbage to go away */
-  delay(500);
-  Serial.println("");
-
-  connect_wifi();
-  connect_server();
-}
 
 void connect_server() {
   /* connection to the server */
