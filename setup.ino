@@ -1,4 +1,9 @@
-/* void setup */
+/*
+ * setup.ino : la fonction setup
+ * 
+ * http://poubelle.online
+ * 
+ */
 
 void setup() {
   Serial.begin(9600);
