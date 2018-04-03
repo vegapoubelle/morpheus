@@ -24,6 +24,7 @@ void setup() {
   Serial.println("");
 
   connect_wifi();
+  connect_server();
 }
 
 void connect_server() {
