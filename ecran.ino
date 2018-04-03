@@ -89,6 +89,11 @@ const unsigned char logo [] PROGMEM = {
 #error("Height incorrect, please fix Adafruit_SSD1306.h!");
 #endif
 
+void init_display() {
+  /* generate the high voltage from the 3.3v line internally */
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+}
+
 void splash_logo_text() {
   display.clearDisplay();
 

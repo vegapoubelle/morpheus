@@ -13,9 +13,7 @@ void setup() {
   Serial.println("");
 
   /******************** ecran */
-  /* generate the high voltage from the 3.3v line internally */
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
-
+  init_display();
   splash_logo_text();
 
 
