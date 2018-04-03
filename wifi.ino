@@ -1,5 +1,5 @@
 /*
- * ecran.ino : gestion de l'ecran lcd
+ * wifi.ino : gestion du wifi 
  * 
  * par Philippe Loctaux (x4m3)
  * 
