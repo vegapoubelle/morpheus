@@ -10,10 +10,14 @@
 #include <WiFi.h>
 
 void connect_wifi() {
+  /* started wifi */
+  Serial.println("wifi: started");
+
   /* connecting to wifi */
   WiFi.begin(ssid, password);
 
   /* waiting for wifi to connect */
+  Serial.println("wifi: if you can't connect, make sure the ssid and password are correct, the wifi router is on, and reboot the device");
   Serial.print("wifi: connecting to network");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
