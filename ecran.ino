@@ -92,7 +92,7 @@ const unsigned char logo [] PROGMEM = {
 void setup()   {
   Serial.begin(9600);
 
-  /* by default, we'll generate the high voltage from the 3.3v line internally! (neat!) */
+  /* generate the high voltage from the 3.3v line internally */
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
 
   display.clearDisplay();
