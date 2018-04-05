@@ -178,6 +178,7 @@ void splash_wifi_text() {
   display_text_normal("verifier reseau puis", 4);
   display_text_normal("redemarer la poubelle", 5);
   delay(delay_ecran);
+  delay(500);
 }
 
 void splash_wifi_connected_text() {
