@@ -126,7 +126,9 @@ void splash_wifi_text() {
   clear_display();
 }
 
-/* display_text(text, line, column, size) */
+/* display_text(text, line, column, size)
+ * fyi: chars are 7px tall by 5px wide on size 1
+ */
 void display_text(String text, int line, int column, int size) {
   display.setCursor(column, line);
   display.setTextSize(size);
