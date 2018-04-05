@@ -15,4 +15,7 @@ int masse;
 /* ecran */
 const int delay_ecran = 2500;
 
+/* inductif */
+const int capteur_inductif = 13;
+
 /* vim: set ts=2 sw=2 et : */

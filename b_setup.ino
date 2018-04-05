@@ -8,6 +8,8 @@
 void setup() {
   Serial.begin(9600);
 
+  pinMode(capteur_inductif, INPUT);
+
   /* esp: wait for garbage to go away */
   delay(500);
   Serial.println("");
@@ -23,10 +25,11 @@ void setup() {
   init_display();
   splash_logo_text();
 
-
   /******************** wifi: text & connect to network */
   splash_wifi_text();
   connect_wifi();
+
+
 }
 
 /* vim: set ts=2 sw=2 et : */
