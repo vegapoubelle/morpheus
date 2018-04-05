@@ -100,36 +100,6 @@ void clear_display() {
   Serial.println("lcd: cleared");
 }
 
-void splash_logo_text() {
-  clear_display();
-
-  /* drawBitmap(x, y, bitmap data, width, height, color) */
-  display.drawBitmap(0, 0, logo, LOGO_WIDTH, LOGO_HEIGHT, WHITE);
-  display.display();
-  Serial.println("lcd: vega poubelle logo displayed");
-  delay(2500);
-
-  clear_display();
-
-  String splash_codename = "programme " + codename;
-  String splash_version = "version " + version;
-  display_text_top("abc", 1);
-  display_text_normal("abc", 1);
-  display_text_normal("def", 2);
-  display_text_normal("hij", 3);
-  display_text_normal("klm", 4);
-  display_text_normal("nop", 5);
-  /* display_text(splash_codename, 30, 0, 1);
-  display_text(splash_version, 40, 0, 1);
-  display_text("concu a pontivy", 50, 0, 1); */
-  Serial.println("lcd: text displayed");
-  delay(2500);
-}
-
-void splash_wifi_text() {
-  clear_display();
-}
-
 /* display_text(text, line, column, size)
  * fyi: chars are 7px tall by 5px wide on size 1
  * but we let 2px of spacing to get readable text
@@ -175,4 +145,36 @@ void display_text_normal(String text, int line) {
   display.println(text);
   display.display();
 }
+
+/********************  functions to run */
+void splash_logo_text() {
+  clear_display();
+
+  /* drawBitmap(x, y, bitmap data, width, height, color) */
+  display.drawBitmap(0, 0, logo, LOGO_WIDTH, LOGO_HEIGHT, WHITE);
+  display.display();
+  Serial.println("lcd: vega poubelle logo displayed");
+  delay(2500);
+
+  clear_display();
+
+  String splash_codename = "programme " + codename;
+  String splash_version = "version " + version;
+  display_text_top("abc", 1);
+  display_text_normal("abc", 1);
+  display_text_normal("def", 2);
+  display_text_normal("hij", 3);
+  display_text_normal("klm", 4);
+  display_text_normal("nop", 5);
+  /* display_text(splash_codename, 30, 0, 1);
+  display_text(splash_version, 40, 0, 1);
+  display_text("concu a pontivy", 50, 0, 1); */
+  Serial.println("lcd: text displayed");
+  delay(2500);
+}
+
+void splash_wifi_text() {
+  clear_display();
+}
+
 /* vim: set ts=2 sw=2 et : */
