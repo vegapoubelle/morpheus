@@ -113,9 +113,9 @@ void display_text(String text, int line, int column, int size) {
   display.display();
 }
 
-void display_text_top(String text, int size) {
+void display_text_top(String text) {
   display.setCursor(0, 7);
-  display.setTextSize(size);
+  display.setTextSize(1);
   display.setTextColor(WHITE);
   display.println(text);
   display.display();
@@ -161,7 +161,7 @@ void splash_logo_text() {
 
   String splash_codename = "programme " + codename;
   String splash_version = "version " + version;
-  display_text_top("Bienvenue!", 1);
+  display_text_top("Bienvenue!");
   display_text_normal(splash_codename, 2);
   display_text_normal(splash_version, 3);
   display_text_normal("concu a pontivy", 4);
