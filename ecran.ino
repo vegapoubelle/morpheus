@@ -108,12 +108,12 @@ void splash_logo_text() {
   display.clearDisplay();
   Serial.println("lcd: cleared");
 
-  /* display_text(text, line, column, size) */
   display_text("programme morpheus", 25, 0, 1);
   display_text("version 0.0.1", 35, 0, 1);
   Serial.println("lcd: text displayed");
 }
 
+/* display_text(text, line, column, size) */
 void display_text(String text, int line, int column, int size) {
   display.setCursor(column, line);
   display.setTextSize(size);
