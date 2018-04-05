@@ -144,11 +144,14 @@ void display_text(String text, int line, int column, int size) {
 }
 
 void display_text_top(String text, int size) {
-  display.setCursor(0, 5);
+  display.setCursor(0, 7);
   display.setTextSize(size);
   display.setTextColor(WHITE);
   display.println(text);
   display.display();
 }
 
+void display_text_normal(String text, int line) {
+
+}
 /* vim: set ts=2 sw=2 et : */
