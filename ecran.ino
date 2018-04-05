@@ -114,10 +114,14 @@ void splash_logo_text() {
   String splash_codename = "programme " + codename;
   String splash_version = "version " + version;
   display_text_top("abc", 1);
-  //display_text("abc", 16, 0, 1);
-  display_text(splash_codename, 30, 0, 1);
+  display_text("abc", 16, 0, 1);
+  display_text("def", 25, 0, 1);
+  display_text("hij", 34, 0, 1);
+  display_text("klm", 43, 0, 1);
+  display_text("nop", 52, 0, 1);
+  /* display_text(splash_codename, 30, 0, 1);
   display_text(splash_version, 40, 0, 1);
-  display_text("concu a pontivy", 50, 0, 1);
+  display_text("concu a pontivy", 50, 0, 1); */
   Serial.println("lcd: text displayed");
   delay(2500);
 }
@@ -128,6 +132,8 @@ void splash_wifi_text() {
 
 /* display_text(text, line, column, size)
  * fyi: chars are 7px tall by 5px wide on size 1
+ * but we let 2px of spacing to get readable text
+ * so a total of 9px
  */
 void display_text(String text, int line, int column, int size) {
   display.setCursor(column, line);
