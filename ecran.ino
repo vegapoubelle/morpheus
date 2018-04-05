@@ -179,4 +179,8 @@ void splash_wifi_text() {
   display_text_normal(wifi_network, 1);
 }
 
+void splash_wifi_connected_text() {
+  display_text_normal("connection reussie", 4);
+}
+
 /* vim: set ts=2 sw=2 et : */

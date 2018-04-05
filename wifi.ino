@@ -26,6 +26,7 @@ void connect_wifi() {
 
   /* display ip and ssid of current network */
   Serial.println(" connected!");
+  splash_wifi_connected_text();
 
   Serial.print("wifi: ip address: ");
   Serial.println(WiFi.localIP());
