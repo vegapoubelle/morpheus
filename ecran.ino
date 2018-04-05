@@ -161,15 +161,10 @@ void splash_logo_text() {
 
   String splash_codename = "programme " + codename;
   String splash_version = "version " + version;
-  display_text_top("abc", 1);
-  display_text_normal("abc", 1);
-  display_text_normal("def", 2);
-  display_text_normal("hij", 3);
-  display_text_normal("klm", 4);
-  display_text_normal("nop", 5);
-  /* display_text(splash_codename, 30, 0, 1);
-  display_text(splash_version, 40, 0, 1);
-  display_text("concu a pontivy", 50, 0, 1); */
+  display_text_top("Bienvenue!", 1);
+  display_text_normal(splash_codename, 2);
+  display_text_normal(splash_version, 3);
+  display_text_normal("concu a pontivy", 4);
   Serial.println("lcd: text displayed");
   delay(2500);
 }
