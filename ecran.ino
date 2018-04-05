@@ -161,6 +161,7 @@ void splash_logo_text() {
 
   String splash_codename = "programme " + codename;
   String splash_version = "version " + version;
+
   display_text_top("Bienvenue!");
   display_text_normal(splash_codename, 3);
   display_text_normal(splash_version, 4);
@@ -173,17 +174,22 @@ void splash_logo_text() {
 void splash_wifi_text() {
   clear_display();
 
-  String wifi_ssid = String(ssid);
-  String wifi_network = "connection en cours";
-  display_text_top("WiFi");
-  display_text_normal(wifi_network, 1);
+  display_text_top("WiFi: connection");
+  display_text_normal("connection en cours", 1);
   display_text_normal("pas de connection?", 3);
   display_text_normal("verifier reseau puis", 4);
   display_text_normal("redemarer la poubelle", 5);
+  delay(delay_ecran);
 }
 
 void splash_wifi_connected_text() {
-  display_text_normal("connection reussie", 4);
+  clear_display();
+
+  String wifi_ssid = String(ssid);
+
+  display_text_top("WiFi: connection");
+  display_text_normal("connection etablie!", 1);
+  display_text_normal(wifi_ssid, 2);
 }
 
 /* vim: set ts=2 sw=2 et : */
