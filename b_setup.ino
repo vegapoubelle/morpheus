@@ -19,12 +19,13 @@ void setup() {
   Serial.print("version ");
   Serial.println(version);
 
-  /******************** ecran */
+  /******************** ecran: init & splash */
   init_display();
   splash_logo_text();
 
 
-  /******************** wifi */
+  /******************** wifi: text & connect to network */
+  splash_wifi_text();
   connect_wifi();
 }
 

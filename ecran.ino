@@ -164,7 +164,6 @@ void splash_logo_text() {
   display_text_top("Bienvenue!");
   display_text_normal(splash_codename, 3);
   display_text_normal(splash_version, 4);
-  display_text_normal("concu a pontivy", 5);
   Serial.println("lcd: text displayed");
   delay(delay_ecran);
 
@@ -173,6 +172,11 @@ void splash_logo_text() {
 
 void splash_wifi_text() {
   clear_display();
+
+  String wifi_ssid = String(ssid);
+  String wifi_network = "connection en cours: " + wifi_ssid;
+  display_text_top("WiFi");
+  display_text_normal(wifi_network, 1);
 }
 
 /* vim: set ts=2 sw=2 et : */
