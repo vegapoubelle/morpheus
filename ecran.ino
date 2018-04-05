@@ -122,6 +122,7 @@ void display_text_top(String text, int size) {
 }
 
 void display_text_normal(String text, int line) {
+  /* put text on lines 1 to 5 */
   switch (line) {
     case 1:
       display.setCursor(0, 16);
