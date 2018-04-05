@@ -24,10 +24,11 @@ void connect_wifi() {
     Serial.print(".");
   }
 
-  /* display ip and ssid of current network */
+  /* success in console and display */
   Serial.println(" connected!");
   splash_wifi_connected_text();
 
+  /* display ip and ssid of current network */
   Serial.print("wifi: ip address: ");
   Serial.println(WiFi.localIP());
 
