@@ -155,7 +155,7 @@ void splash_logo_text() {
   display.drawBitmap(0, 0, logo, LOGO_WIDTH, LOGO_HEIGHT, WHITE);
   display.display();
   Serial.println("lcd: vega poubelle logo displayed");
-  delay(2500);
+  delay(delay_ecran);
 
   clear_display();
 
@@ -166,7 +166,7 @@ void splash_logo_text() {
   display_text_normal(splash_version, 4);
   display_text_normal("concu a pontivy", 5);
   Serial.println("lcd: text displayed");
-  delay(2500);
+  delay(delay_ecran);
 }
 
 void splash_wifi_text() {

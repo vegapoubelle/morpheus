@@ -12,4 +12,7 @@ const char* host = "poubelle.online";
 const int port = 80;
 int masse;
 
+/* ecran */
+const int delay_ecran = 2500;
+
 /* vim: set ts=2 sw=2 et : */
