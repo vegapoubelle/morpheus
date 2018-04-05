@@ -187,7 +187,8 @@ void splash_wifi_connected_text() {
 
   display_text_top("WiFi: connection");
   display_text_normal("connection etablie!", 1);
-  display_text_normal(wifi_ssid, 2);
+  display_text_normal("reseau utilise:", 3);
+  display_text_normal(wifi_ssid, 4);
 }
 
 /* vim: set ts=2 sw=2 et : */
