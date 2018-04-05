@@ -174,9 +174,12 @@ void splash_wifi_text() {
   clear_display();
 
   String wifi_ssid = String(ssid);
-  String wifi_network = "connection en cours: " + wifi_ssid;
+  String wifi_network = "connection en cours";
   display_text_top("WiFi");
   display_text_normal(wifi_network, 1);
+  display_text_normal("pas de connection?", 3);
+  display_text_normal("verifier reseau puis", 4);
+  display_text_normal("redemarer la poubelle", 5);
 }
 
 void splash_wifi_connected_text() {
