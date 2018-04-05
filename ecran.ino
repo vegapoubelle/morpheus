@@ -167,8 +167,6 @@ void splash_logo_text() {
   display_text_normal(splash_version, 4);
   Serial.println("lcd: text displayed");
   delay(delay_ecran);
-
-  clear_display();
 }
 
 void splash_wifi_text() {
