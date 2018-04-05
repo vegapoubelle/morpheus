@@ -152,15 +152,27 @@ void display_text_top(String text, int size) {
 }
 
 void display_text_normal(String text, int line) {
-  if line == 1
-    display.setCursor(0, 16);
-  else if line == 2
-    display.setCursor(0, 25);
-  else if line == 3
-    display.setCursor(0, 34);
-  else if line == 4
-    display.setCursor(0, 43);
-  else if line == 5
-    display.setCursor(0, 52);
+  switch (line) {
+    case 1:
+      display.setCursor(0, 16);
+      break;
+    case 2:
+      display.setCursor(0, 25);
+      break;
+    case 3:
+      display.setCursor(0, 34);
+      break;
+    case 4:
+      display.setCursor(0, 43);
+      break;
+    case 5:
+      display.setCursor(0, 52);
+      break;
+  }
+
+  display.setTextSize(1);
+  display.setTextColor(WHITE);
+  display.println(text);
+  display.display();
 }
 /* vim: set ts=2 sw=2 et : */
