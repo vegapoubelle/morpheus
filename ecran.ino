@@ -95,9 +95,13 @@ void init_display() {
   Serial.println("lcd: started");
 }
 
-void splash_logo_text() {
+void clear_display() {
   display.clearDisplay();
   Serial.println("lcd: cleared");
+}
+
+void splash_logo_text() {
+  clear_display();
 
   /* drawBitmap(x, y, bitmap data, width, height, color) */
   display.drawBitmap(0, 0, logo, LOGO_WIDTH, LOGO_HEIGHT, WHITE);
@@ -114,7 +118,13 @@ void splash_logo_text() {
   display_text(splash_version, 35, 0, 1);
   display_text("concu a pontivy", 45, 0, 1);
   Serial.println("lcd: text displayed");
+  delay(2500);
 }
+
+void splash_wifi_text() {
+  clear_display();
+}
+
 
 /* display_text(text, line, column, size) */
 void display_text(String text, int line, int column, int size) {

@@ -12,6 +12,13 @@ void setup() {
   delay(500);
   Serial.println("");
 
+  /* serial: programme & version */
+  Serial.print("programme ");
+  Serial.println(codename);
+
+  Serial.print("version ");
+  Serial.println(version);
+
   /******************** ecran */
   init_display();
   splash_logo_text();
