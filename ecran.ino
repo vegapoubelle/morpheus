@@ -114,11 +114,11 @@ void splash_logo_text() {
   String splash_codename = "programme " + codename;
   String splash_version = "version " + version;
   display_text_top("abc", 1);
-  display_text("abc", 16, 0, 1);
-  display_text("def", 25, 0, 1);
-  display_text("hij", 34, 0, 1);
-  display_text("klm", 43, 0, 1);
-  display_text("nop", 52, 0, 1);
+  display_text_normal("abc", 1);
+  display_text_normal("def", 2);
+  display_text_normal("hij", 3);
+  display_text_normal("klm", 4);
+  display_text_normal("nop", 5);
   /* display_text(splash_codename, 30, 0, 1);
   display_text(splash_version, 40, 0, 1);
   display_text("concu a pontivy", 50, 0, 1); */
