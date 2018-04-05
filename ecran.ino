@@ -108,8 +108,11 @@ void splash_logo_text() {
   display.clearDisplay();
   Serial.println("lcd: cleared");
 
-  display_text("programme morpheus", 25, 0, 1);
-  display_text("version 0.0.1", 35, 0, 1);
+  String splash_codename = "programme " + codename;
+  String splash_version = "version " + version;
+  display_text(splash_codename, 25, 0, 1);
+  display_text(splash_version, 35, 0, 1);
+  display_text("concu a pontivy", 45, 0, 1);
   Serial.println("lcd: text displayed");
 }
 
