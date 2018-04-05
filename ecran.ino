@@ -109,14 +109,15 @@ void splash_logo_text() {
   Serial.println("lcd: vega poubelle logo displayed");
   delay(2500);
 
-  display.clearDisplay();
-  Serial.println("lcd: cleared");
+  clear_display();
 
   String splash_codename = "programme " + codename;
   String splash_version = "version " + version;
-  display_text(splash_codename, 25, 0, 1);
-  display_text(splash_version, 35, 0, 1);
-  display_text("concu a pontivy", 45, 0, 1);
+  display_text_top("abc", 1);
+  //display_text("abc", 16, 0, 1);
+  display_text(splash_codename, 30, 0, 1);
+  display_text(splash_version, 40, 0, 1);
+  display_text("concu a pontivy", 50, 0, 1);
   Serial.println("lcd: text displayed");
   delay(2500);
 }
@@ -125,10 +126,17 @@ void splash_wifi_text() {
   clear_display();
 }
 
-
 /* display_text(text, line, column, size) */
 void display_text(String text, int line, int column, int size) {
   display.setCursor(column, line);
+  display.setTextSize(size);
+  display.setTextColor(WHITE);
+  display.println(text);
+  display.display();
+}
+
+void display_text_top(String text, int size) {
+  display.setCursor(0, 5);
   display.setTextSize(size);
   display.setTextColor(WHITE);
   display.println(text);
