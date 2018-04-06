@@ -7,9 +7,9 @@
 
 void test_inductif() {
 
-  if ( capteur_inductif == 1)
+  if ( capteur_inductif == 1) {
     /* put shit here */
-
+  }
 
 }
 

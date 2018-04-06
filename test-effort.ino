@@ -8,11 +8,7 @@ const byte hx711_clock_pin = 25;
 
 Q2HX711 hx711(hx711_data_pin, hx711_clock_pin);
 
-void setup() {
-  Serial.begin(9600);
-}
-
-void loop() {
+void test_effort() {
   int poids = (hx711.read()/100-85313)/4.4;
   Serial.print(poids);
   Serial.println(" grammes");
