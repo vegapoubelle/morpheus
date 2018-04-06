@@ -15,6 +15,9 @@ https://github.com/espressif/arduino-esp32/
 ### capteur d'effort
 * https://github.com/queuetue/Q2-HX711-Arduino-Library.git
 
+### moteur pas à pas
+* https://github.com/laurb9/StepperDriver
+
 ## l'équipe
 
 | [@bideabiere](https://github.com/bideabiere) | [@darkbenjo](https://github.com/darkbenjo) | [@Guehendek](https://github.com/Guehendek) | [@x4m3](https://github.com/x4m3) |
