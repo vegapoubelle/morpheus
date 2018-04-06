@@ -16,7 +16,6 @@ void init_moteur() {
 }
 
 void tourner_moteur() {
-
   // energize coils - the motor will hold position
   // stepper.enable();
 
