@@ -38,7 +38,7 @@ void connect_server() {
   /* connection to the server */
   WiFiClient client;
   if (client.connect(host, port)) {
-    /* message that we are sending stuff to the server */
+    /* message in console and display */
     Serial.println("wifi: the following data will be sent:");
     Serial.println("**************************************");
 
@@ -47,7 +47,9 @@ void connect_server() {
     Serial.println(masse);
     Serial.println("**************************************");
 
-    /* send the http get request */
+    splash_wifi_send_text();
+
+    /* start the http get request */
     client.print("GET /php/add.php?");
 
     /* send the value of 'masse' */

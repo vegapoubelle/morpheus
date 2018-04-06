@@ -102,6 +102,7 @@ void clear_display() {
  * fyi: chars are 7px tall by 5px wide on size 1
  * but we let 2px of spacing to get readable text
  * so a total of 9px
+ * we can display a total of 21 characters !!!!!!
  */
 void display_text(String text, int line, int column, int size) {
   display.setCursor(column, line);
@@ -189,6 +190,14 @@ void splash_wifi_connected_text() {
   display_text_normal("connection etablie!", 1);
   display_text_normal("reseau utilise:", 3);
   display_text_normal(wifi_ssid, 4);
+  delay(delay_ecran);
+}
+
+void splash_wifi_send_text() {
+  clear_display();
+
+  display_text_top("WiFi: envoi en cours");
+  display_text_normal("envoi des donnees:", 1);
 }
 
 /* vim: set ts=2 sw=2 et : */
