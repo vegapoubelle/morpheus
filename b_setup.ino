@@ -26,7 +26,7 @@ void setup() {
   splash_logo_text();
 
   /******************** wifi: text & connect to network */
-  splash_wifi_text();
+  splash_wifi_init_text();
   connect_wifi();
 
 

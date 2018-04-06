@@ -169,7 +169,7 @@ void splash_logo_text() {
   delay(delay_ecran);
 }
 
-void splash_wifi_text() {
+void splash_wifi_init_text() {
   clear_display();
 
   display_text_top("WiFi: connection");
