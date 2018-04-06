@@ -13,7 +13,7 @@ https://github.com/espressif/arduino-esp32/
 * https://github.com/vegapoubelle/Adafruit_SSD1306
 
 ### capteur d'effort
-* https://github.com/queuetue/Q2-HX711-Arduino-Library.git
+* https://github.com/queuetue/Q2-HX711-Arduino-Library
 
 ### moteur pas à pas
 * https://github.com/laurb9/StepperDriver
