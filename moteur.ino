@@ -1,9 +1,9 @@
 /*
-   moteur.ino : le moteur pas à pas
+   moteur.ino : le moteur pas a pas
 
-http://poubelle.online
+   http://poubelle.online
 
- */
+*/
 
 #include <Arduino.h>
 #include "BasicStepperDriver.h"
