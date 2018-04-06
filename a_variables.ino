@@ -18,4 +18,8 @@ const int delay_ecran = 2500;
 /* inductif */
 const int capteur_inductif = 13;
 
+/* effort */
+const byte hx711_data_pin = 34;
+const byte hx711_clock_pin = 25;
+
 /* vim: set ts=2 sw=2 et : */
