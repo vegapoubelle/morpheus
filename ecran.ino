@@ -1,8 +1,6 @@
 /*
    ecran.ino : gestion de l'ecran lcd
 
-   par Philippe Loctaux (x4m3)
-
    http://poubelle.online
 
 */

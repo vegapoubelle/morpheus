@@ -1,8 +1,6 @@
 /*
    wifi.ino : gestion du wifi
 
-   par Philippe Loctaux (x4m3)
-
    http://poubelle.online
 
 */
