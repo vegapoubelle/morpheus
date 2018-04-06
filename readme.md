@@ -6,7 +6,7 @@ le programme de la poubelle pour l'esp32
 
 ## bibliothèques
 
-https://github.com/espressif/arduino-esp32/
+https://github.com/espressif/arduino-esp32
 
 ### écran
 * https://github.com/adafruit/Adafruit-GFX-Library
