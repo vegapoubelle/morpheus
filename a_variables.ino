@@ -22,4 +22,11 @@ const int capteur_inductif = 13;
 const byte hx711_data_pin = 34;
 const byte hx711_clock_pin = 25;
 
+/* moteur */
+#define MOTOR_STEPS 200
+#define RPM 120
+#define MICROSTEPS 1
+#define DIR 15
+#define STEP 2
+
 /* vim: set ts=2 sw=2 et : */

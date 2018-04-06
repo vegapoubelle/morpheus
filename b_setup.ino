@@ -10,6 +10,9 @@ void setup() {
 
   pinMode(capteur_inductif, INPUT);
 
+  /* moteur */
+  init_moteur();
+
   /* esp: wait for garbage to go away */
   delay(500);
   Serial.println("");
