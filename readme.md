@@ -12,6 +12,9 @@ https://github.com/espressif/arduino-esp32/
 * https://github.com/adafruit/Adafruit-GFX-Library
 * https://github.com/vegapoubelle/Adafruit_SSD1306
 
+### capteur d'effort
+* https://github.com/queuetue/Q2-HX711-Arduino-Library.git
+
 ## l'équipe
 
 | [@bideabiere](https://github.com/bideabiere) | [@darkbenjo](https://github.com/darkbenjo) | [@Guehendek](https://github.com/Guehendek) | [@x4m3](https://github.com/x4m3) |
