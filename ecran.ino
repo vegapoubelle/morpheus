@@ -178,6 +178,7 @@ void splash_wifi_text() {
   display_text_normal("verifier reseau puis", 4);
   display_text_normal("redemarer la poubelle", 5);
   delay(delay_ecran);
+  /* additional delay to let people read what's on the screen */
   delay(500);
 }
 
