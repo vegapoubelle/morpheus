@@ -6,7 +6,7 @@
 */
 
 /* wifi */
-const char* ssid     = "phil's phone";
+const char* ssid     = "deadbaed";
 const char* password = "mechkeyb";
 const char* host = "poubelle.online";
 const int port = 80;
