@@ -164,7 +164,7 @@ void splash_logo_text() {
   display_text_top("Bienvenue!");
   display_text_normal(splash_codename, 3);
   display_text_normal(splash_version, 4);
-  Serial.println("lcd: text displayed");
+  Serial.println("lcd: codename and version displayed");
   delay(delay_ecran);
 }
 
