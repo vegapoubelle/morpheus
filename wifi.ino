@@ -63,7 +63,11 @@ void connect_server() {
     /* separation for other variables */
     client.print("&");
 
-    /* send the value of "matiere" */
+    /* send the value of "matiere"
+     * 1: metal
+     * 2: verre
+     * 3: plastique
+     */
     client.print("matiere=");
     client.print("1");
 
