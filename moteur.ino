@@ -30,5 +30,3 @@ void tourner_moteur() {
 
   delay(5000);
 }
-
-/* vim: set ts=2 sw=2 et : */

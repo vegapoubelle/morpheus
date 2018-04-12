@@ -28,5 +28,3 @@ const byte hx711_clock_pin = 23;
 #define MICROSTEPS 1
 #define DIR 15
 #define STEP 2
-
-/* vim: set ts=2 sw=2 et : */

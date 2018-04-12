@@ -30,5 +30,3 @@
  		poids +- valeur: dans le bac autre
 
 */
-
-/* vim: set ts=2 sw=2 et : */

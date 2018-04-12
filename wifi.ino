@@ -12,7 +12,7 @@ void connect_wifi() {
   Serial.println("wifi: started");
 
   /* disconnect from wifi first */
-  WiFi.disconnect(); 
+  WiFi.disconnect();
   Serial.println("wifi: disconnected");
 
   /* connecting to wifi */
@@ -110,6 +110,3 @@ void connect_server() {
   delay(3000);
 
 }
-
-/* vim: set ts=2 sw=2 et : */
-

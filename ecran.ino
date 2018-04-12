@@ -204,5 +204,3 @@ void splash_wifi_send_text() {
   display_text_normal(display_matiere, 2);
   delay(delay_ecran);
 }
-
-/* vim: set ts=2 sw=2 et : */

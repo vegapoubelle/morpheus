@@ -15,5 +15,3 @@ void test_effort() {
   Serial.println(" grammes");
   delay(500);
 }
-
-/* vim: set ts=2 sw=2 et : */
