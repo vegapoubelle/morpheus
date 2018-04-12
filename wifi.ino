@@ -11,6 +11,10 @@ void connect_wifi() {
   /* started wifi */
   Serial.println("wifi: started");
 
+  /* disconnect from wifi first */
+  WiFi.disconnect(); 
+  Serial.println("wifi: disconnected");
+
   /* connecting to wifi */
   WiFi.begin(ssid, password);
 
@@ -55,6 +59,13 @@ void connect_server() {
     /* send the value of 'masse' */
     client.print("masse=");
     client.print(masse);
+
+    /* separation for other variables */
+    client.print("&");
+
+    /* send the value of "matiere" */
+    client.print("matiere=");
+    client.print("1");
 
     /* specify http spec version */
     client.println(" HTTP/1.1");
