@@ -68,8 +68,9 @@ void connect_server() {
      * 2: verre
      * 3: plastique
      */
+    matiere = random(1,4);
     client.print("matiere=");
-    client.print("1");
+    client.print(matiere);
 
     /* specify http spec version */
     client.println(" HTTP/1.1");

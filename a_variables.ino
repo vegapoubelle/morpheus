@@ -10,7 +10,7 @@ const char* ssid     = "deadbaed";
 const char* password = "mechkeyb";
 const char* host = "poubelle.online";
 const int port = 80;
-int masse;
+int masse, matiere;
 
 /* ecran */
 const int delay_ecran = 2500;

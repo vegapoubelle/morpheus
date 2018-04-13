@@ -197,7 +197,7 @@ void splash_wifi_send_text() {
   clear_display();
 
   String display_masse = "masse:   " + String(masse);
-  String display_matiere = "matiere: ";
+  String display_matiere = "matiere: " + String(matiere);
 
   display_text_top("WiFi: envoi en cours");
   display_text_normal(display_masse, 1);
