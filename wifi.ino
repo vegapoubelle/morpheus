@@ -68,7 +68,6 @@ void connect_server() {
      * 2: verre
      * 3: plastique
      */
-    matiere = random(1,4);
     client.print("matiere=");
     client.print(matiere);
 
