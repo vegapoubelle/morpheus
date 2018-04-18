@@ -46,7 +46,6 @@ void connect_server() {
     Serial.println("wifi: the following data will be sent:");
     Serial.println("**************************************");
 
-    masse = random(300);
     Serial.print("masse: ");
     Serial.println(masse);
     Serial.println("**************************************");
