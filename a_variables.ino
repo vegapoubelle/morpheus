@@ -19,8 +19,8 @@ const int delay_ecran = 2500;
 const int capteur_inductif = 13;
 
 /* effort */
-const byte hx711_data_pin = 18;
-const byte hx711_clock_pin = 23;
+const byte hx711_data_pin = 23;
+const byte hx711_clock_pin = 18;
 
 /* moteur */
 #define MOTOR_STEPS 200
