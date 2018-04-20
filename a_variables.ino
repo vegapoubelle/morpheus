@@ -17,6 +17,7 @@ const int delay_ecran = 2500;
 
 /* inductif */
 const int capteur_inductif = 13;
+pinMode(capteur_inductif, INPUT);
 
 /* effort */
 const byte hx711_data_pin = 23;
