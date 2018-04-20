@@ -7,7 +7,7 @@
 
 void test_inductif() {
 
-  if ( capteur_inductif == 1)
+  if ( digitalRead(capteur_inductif) == 1)
     matiere = 1;
 
 }
