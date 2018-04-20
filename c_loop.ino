@@ -8,5 +8,5 @@
 void loop() {
   /******************** wifi */
   test_effort();
-  splash_weight_text();
+  connect_server();
 }

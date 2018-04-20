@@ -204,16 +204,3 @@ void splash_wifi_send_text() {
   display_text_normal(display_matiere, 2);
   delay(delay_ecran);
 }
-
-void splash_weight_text() {
-  clear_display();
-
-  String display_masse = "masse:   " + String(masse);
-  String display_matiere = "matiere: autre";
-
-  display_text_top("dechet detecte");
-  display_text_normal(display_masse, 1);
-  display_text_normal(display_matiere, 2);
-
-  delay(3000);
-}
