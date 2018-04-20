@@ -16,7 +16,7 @@ void connect_wifi() {
   Serial.println("wifi: disconnected");
 
   /* connecting to wifi */
-  WiFi.begin(ssid, password);
+  WiFi.begin(wifi_network, wifi_password);
 
   /* waiting for wifi to connect */
   Serial.println("wifi: if you can't connect, make sure the ssid and password are correct, the wifi router is on, and reboot the device");
@@ -35,7 +35,7 @@ void connect_wifi() {
   Serial.println(WiFi.localIP());
 
   Serial.print("wifi: network ssid: ");
-  Serial.println(ssid);
+  Serial.println(wifi_network);
 }
 
 void connect_server() {

@@ -184,7 +184,7 @@ void splash_wifi_init_text() {
 void splash_wifi_connected_text() {
   clear_display();
 
-  String wifi_ssid = String(ssid);
+  String wifi_ssid = String(wifi_network);
 
   display_text_top("WiFi: connection");
   display_text_normal("connection etablie!", 1);
