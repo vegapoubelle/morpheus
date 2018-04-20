@@ -48,6 +48,9 @@ void connect_server() {
 
     Serial.print("masse: ");
     Serial.println(masse);
+
+    Serial.print("matiere: ");
+    Serial.println(matiere);
     Serial.println("**************************************");
 
     splash_wifi_send_text();
