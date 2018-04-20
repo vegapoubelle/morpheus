@@ -6,8 +6,8 @@
 */
 
 /* wifi */
-const char* wifi_network     = "deadbaed";
-const char* wifi_password = "mechkeybb";
+char* wifi_network     = "deadbaed";
+char* wifi_password = "mechkeybb";
 const char* host = "poubelle.online";
 const int port = 80;
 int masse, matiere = 4;
