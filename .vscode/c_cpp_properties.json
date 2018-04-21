@@ -3,12 +3,20 @@
         {
             "name": "Linux",
             "includePath": [
-                "/home/x4m3/Arduino/hardware/espressif/esp32/cores/esp32"
+                "${workspaceFolder}",
+                "/home/x4m3/Arduino/hardware/espressif/esp32/cores/esp32",
+                "/home/x4m3/Arduino/libraries",
+                "/home/x4m3/Arduino/hardware/espressif/esp32/libraries",
+                "/home/x4m3/bin/arduino-1.8.5/libraries"
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": false,
                 "path": [
-                    "/home/x4m3/Arduino/hardware/espressif/esp32/cores/esp32"
+                    "${workspaceRoot}",
+                    "/home/x4m3/Arduino/hardware/espressif/esp32/cores/esp32",
+                    "/home/x4m3/Arduino/libraries",
+                    "/home/x4m3/Arduino/hardware/espressif/esp32/libraries",
+                    "/home/x4m3/bin/arduino-1.8.5/libraries"
                 ]
             },
             "intelliSenseMode": "clang-x64",
