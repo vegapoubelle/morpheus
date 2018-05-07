@@ -18,8 +18,11 @@ void setup() {
 
 /* LOOP */
 void loop() {
-	while (test_effort() <= 0)
-		Serial.println("en attente de ta mere");
+	while (test_effort() <= 0) {
+		Serial.print("ta mere elle pese ");
+		Serial.print(test_effort());
+		Serial.println(" grammes");
+}
 
 	if (test_inductif() == true)
 		Serial.println("metal");
