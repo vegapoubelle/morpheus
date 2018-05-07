@@ -18,21 +18,23 @@ void setup() {
 
 /* LOOP */
 void loop() {
-	while (test_effort() <= 0) {
-		Serial.print("ta mere elle pese ");
-		Serial.print(test_effort());
-		Serial.println(" grammes");
-	}
+	while (test_effort() <= 0)
+		message();
 
 	if (test_inductif() == true) {
+		message();
 		Serial.println("metal");
 	} else {
 
-		if (test_effort() <= 125)
+		if (test_effort() <= 125) {
+			message();
 			Serial.println("plastique");
+		}
 
-		else
+		else {
+			message();
 			Serial.println("verre");
+		}
 	}
 }
 
@@ -48,4 +50,10 @@ bool test_inductif() {
 		est_inductif = false;
 
 	return est_inductif;
+}
+
+void message() {
+	Serial.print("poids: ");
+	Serial.print(test_effort());
+	Serial.println(" grammes");
 }
