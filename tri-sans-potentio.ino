@@ -22,18 +22,18 @@ void loop() {
 		Serial.print("ta mere elle pese ");
 		Serial.print(test_effort());
 		Serial.println(" grammes");
-}
+	}
 
-if (test_inductif() == true) {
-	Serial.println("metal");
-} else {
+	if (test_inductif() == true) {
+		Serial.println("metal");
+	} else {
 
-	if (test_effort() <= 125)
-		Serial.println("plastique");
+		if (test_effort() <= 125)
+			Serial.println("plastique");
 
-	else
-		Serial.println("verre");
-}
+		else
+			Serial.println("verre");
+	}
 }
 
 int test_effort() {
