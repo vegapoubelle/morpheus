@@ -17,23 +17,27 @@ void setup() {
 
 /* LOOP */
 void loop() {
-	while (test_effort() <= 0)
+	while (test_effort() <= 0) {
 		message();
+	}
 
 	if (test_inductif() == true) {
 		message();
 		Serial.println("metal");
+		Serial.println();
 	}
 
 	else {
 		if (test_effort() <= 125) {
 			message();
 			Serial.println("plastique");
+			Serial.println();
 		}
 
 		else {
 			message();
 			Serial.println("verre");
+			Serial.println();
 		}
 	}
 }
