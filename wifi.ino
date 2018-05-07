@@ -69,6 +69,7 @@ void connect_server() {
      * 1: metal
      * 2: verre
      * 3: plastique
+     * 4: autre
      */
     client.print("matiere=");
     client.print(matiere);
