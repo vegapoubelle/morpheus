@@ -23,8 +23,9 @@ void loop() {
 	if (test_inductif() == true) {
 		message();
 		Serial.println("metal");
-	} else {
+	}
 
+	else {
 		if (test_effort() <= 125) {
 			message();
 			Serial.println("plastique");
