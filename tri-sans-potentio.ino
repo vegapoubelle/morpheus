@@ -12,7 +12,6 @@ bool est_inductif;
 /* SETUP */
 void setup() {
 	Serial.begin(9600);
-
 	pinMode(capteur_inductif, INPUT);
 }
 
