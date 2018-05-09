@@ -17,6 +17,10 @@ void setup() {
 
 /* LOOP */
 void loop() {
+	tri();
+}
+
+void tri() {
 	while (test_effort() <= 0) {
 		message();
 	}
