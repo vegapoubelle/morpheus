@@ -21,16 +21,19 @@ void loop() {
 }
 
 void tri() {
+	/* dont do anything if the weight is under 0 grams */
 	while (test_effort() <= 0) {
 		message();
 	}
 
+	/* if the object is a metal */
 	if (test_inductif() == true) {
 		message();
 		Serial.println("metal");
 		Serial.println();
 	}
 
+	/* if the object is under 125 grams, it's plastic */
 	else {
 		if (test_effort() <= 125) {
 			message();
@@ -38,6 +41,7 @@ void tri() {
 			Serial.println();
 		}
 
+	/* if the object is above 125 grams, it's glass */
 		else {
 			message();
 			Serial.println("verre");
@@ -46,11 +50,13 @@ void tri() {
 	}
 }
 
+/* function to get the current weight */
 int test_effort() {
 	masse = ((hx711.read()/100-84406)/10)-666;
 	return masse;
 }
 
+/* function to test if it's a metal or not */
 bool test_inductif() {
 	if (digitalRead(capteur_inductif) == 1)
 		est_inductif = true;
@@ -60,6 +66,7 @@ bool test_inductif() {
 	return est_inductif;
 }
 
+/* print the current weight */
 void message() {
 	Serial.print("poids: ");
 	Serial.print(test_effort());
