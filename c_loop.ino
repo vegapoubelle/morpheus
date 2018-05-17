@@ -6,6 +6,6 @@
 */
 
 void loop() {
-  connect_server();
   tri();
+  connect_server();
 }
