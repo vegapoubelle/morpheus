@@ -50,12 +50,6 @@ void tri() {
 	}
 }
 
-/* function to get the current weight */
-int test_effort() {
-	masse = ((hx711.read()/100-84406)/10)-666;
-	return masse;
-}
-
 /* function to test if it's a metal or not */
 bool test_inductif() {
 	if (digitalRead(capteur_inductif) == 1)
