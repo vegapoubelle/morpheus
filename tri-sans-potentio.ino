@@ -28,9 +28,9 @@ void tri() {
     Serial.println();
   }
 
-  /* if the object is under 125 grams, it's plastic */
+  /* if the object is under said weight, it's plastic */
   else {
-    if (test_effort() <= 125) {
+    if (test_effort() <= 175) {
       matiere = 3;
       show_weight();
       Serial.println();
@@ -38,7 +38,7 @@ void tri() {
       Serial.println();
     }
 
-    /* if the object is above 125 grams, it's glass */
+    /* if the object is above the weight above, it's glass */
     else {
       matiere = 2;
       show_weight();
