@@ -201,6 +201,16 @@ void splash_wifi_send_text() {
   delay(delay_ecran);
 }
 
+void splash_wifi_send_success_text() {
+  clear_display();
+
+  display_text_top("WiFi: envoi fini");
+  display_text_normal("envoi reussi!", 1);
+  display_text_normal("consultation en ligne", 3);
+  display_text_normal("www.poubelle.online", 4);
+  delay(delay_ecran);
+}
+
 void splash_weight_text() {
   clear_display();
 

@@ -90,6 +90,7 @@ void connect_server() {
 
     /* message to say success! */
     Serial.println("wifi: information sent to the server !");
+    splash_wifi_send_success_text();
 
   } else {
     /* if the conneciton failed */
