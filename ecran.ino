@@ -208,6 +208,17 @@ void splash_wifi_send_success_text() {
   display_text_normal("envoi reussi!", 1);
   display_text_normal("consultation en ligne", 3);
   display_text_normal("www.poubelle.online", 4);
+  delay(delay_ecran * 2);
+}
+
+void splash_weight_waiting_text() {
+  clear_display();
+  Serial.println("waiting for a weight...");
+
+  display_text_top("Acquisition de masse");
+  display_text_normal("en attente", 1);
+  display_text_normal("d'un dechet", 2);
+  display_text_normal("...", 3);
   delay(delay_ecran);
 }
 
@@ -220,5 +231,5 @@ void splash_weight_text() {
   display_text_top("Acquisition de masse");
   display_text_normal(display_masse, 1);
   display_text_normal(display_matiere, 2);
-  delay(delay_ecran);
+  delay(delay_ecran * 2);
 }

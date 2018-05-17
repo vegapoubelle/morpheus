@@ -16,6 +16,7 @@ http://poubelle.online
 void tri() {
   /* dont do anything if the weight is under 0 grams */
   while (test_effort() <= 0)
+    splash_weight_waiting_text();
     message();
 
   /* if the object is a metal */
