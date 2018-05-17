@@ -1,7 +1,9 @@
-/* LOOP */
-void loop() {
-	tri();
-}
+/*
+   tri-sans-potentio.ino: tri sans le potentio
+
+   http://poubelle.online
+
+*/
 
 void tri() {
 	/* dont do anything if the weight is under 0 grams */

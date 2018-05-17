@@ -10,4 +10,5 @@ void loop() {
   test_effort();
   test_inductif();
   connect_server();
+  tri();
 }
