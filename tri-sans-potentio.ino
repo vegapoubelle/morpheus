@@ -7,9 +7,8 @@
 
 void tri() {
 	/* dont do anything if the weight is under 0 grams */
-	while (test_effort() <= 0) {
+	while (test_effort() <= 0)
 		message();
-	}
 
 	/* if the object is a metal */
 	if (test_inductif() == true) {
