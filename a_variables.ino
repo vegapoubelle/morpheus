@@ -12,7 +12,15 @@ char const *host = "poubelle.online";
 const int port = 80;
 
 /* matiere et masse */
-int masse, matiere = 4;
+int masse;
+
+/*
+ * 1: metal
+ * 2: verre
+ * 3: plastique
+ * 4: autre
+ */
+int matiere;
 
 /* ecran */
 const int delay_ecran = 2500;
