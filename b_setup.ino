@@ -32,6 +32,4 @@ void setup() {
   /******************** wifi: text & connect to network */
   splash_wifi_init_text();
   connect_wifi();
-
-
 }
