@@ -1,9 +1,3 @@
-/* SETUP */
-void setup() {
-	Serial.begin(9600);
-	pinMode(capteur_inductif, INPUT);
-}
-
 /* LOOP */
 void loop() {
 	tri();

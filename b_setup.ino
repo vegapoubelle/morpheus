@@ -8,6 +8,7 @@
 void setup() {
   Serial.begin(9600);
 
+  /* capteur inductif */
   pinMode(capteur_inductif, INPUT);
 
   /* moteur */
