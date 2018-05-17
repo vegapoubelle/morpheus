@@ -225,11 +225,25 @@ void splash_weight_waiting_text() {
 void splash_weight_text() {
   clear_display();
 
-  String display_masse = "masse:   " + String(masse);
-  String display_matiere = "matiere: " + String(matiere);
-
   display_text_top("Acquisition de masse");
+
+  String display_masse = "masse:   " + String(masse);
   display_text_normal(display_masse, 1);
-  display_text_normal(display_matiere, 2);
+
+  switch (matiere) {
+    case 1:
+      display_text_normal("matiere: metal", 2);
+      break;
+    case 2:
+      display_text_normal("matiere: verre", 2);
+      break;
+    case 3:
+      display_text_normal("matiere: plastique", 2);
+      break;
+    case 4:
+      display_text_normal("matiere: autre", 2);
+      break;
+  }
+
   delay(delay_ecran * 2);
 }
