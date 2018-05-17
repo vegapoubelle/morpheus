@@ -113,7 +113,4 @@ void connect_server() {
     Serial.println("wifi: client stopped");
     Serial.println("");
   }
-
-  delay(3000);
-
 }
