@@ -227,7 +227,7 @@ void splash_weight_text() {
 
   display_text_top("Acquisition de masse");
 
-  String display_masse = "masse:   " + String(masse);
+  String display_masse = "masse:   " + String(masse) + " grammes";
   display_text_normal(display_masse, 1);
 
   switch (matiere) {
