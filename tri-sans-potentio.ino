@@ -17,12 +17,12 @@ void tri() {
   /* dont do anything if the weight is under 0 grams */
   while (test_effort() <= 0)
     splash_weight_waiting_text();
-    message();
+    show_weight();
 
   /* if the object is a metal */
   if (test_inductif() == true) {
     matiere = 1;
-    message();
+    show_weight();
     Serial.println();
     Serial.println("metal");
     Serial.println();
@@ -32,7 +32,7 @@ void tri() {
   else {
     if (test_effort() <= 125) {
       matiere = 3;
-      message();
+      show_weight();
       Serial.println();
       Serial.println("plastique");
       Serial.println();
@@ -41,7 +41,7 @@ void tri() {
     /* if the object is above 125 grams, it's glass */
     else {
       matiere = 2;
-      message();
+      show_weight();
       Serial.println();
       Serial.println("verre");
       Serial.println();
@@ -50,7 +50,7 @@ void tri() {
 }
 
 /* print the current weight */
-void message() {
+void show_weight() {
   Serial.print("poids: ");
   Serial.print(test_effort());
   Serial.println(" grammes");
