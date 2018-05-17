@@ -1,7 +1,7 @@
 /*
    tri-sans-potentio.ino: tri sans le potentio
 
-   http://poubelle.online
+http://poubelle.online
 
  */
 
@@ -22,6 +22,7 @@ void tri() {
   if (test_inductif() == true) {
     matiere = 1;
     message();
+    Serial.println();
     Serial.println("metal");
     Serial.println();
   }
@@ -31,6 +32,7 @@ void tri() {
     if (test_effort() <= 125) {
       matiere = 3;
       message();
+      Serial.println();
       Serial.println("plastique");
       Serial.println();
     }
@@ -39,6 +41,7 @@ void tri() {
     else {
       matiere = 2;
       message();
+      Serial.println();
       Serial.println("verre");
       Serial.println();
     }
