@@ -10,6 +10,8 @@ char const *wifi_network = "deadbaed";
 char const *wifi_password = "mechkeybb";
 char const *host = "poubelle.online";
 const int port = 80;
+
+/* matiere et masse */
 int masse, matiere = 4;
 
 /* ecran */
