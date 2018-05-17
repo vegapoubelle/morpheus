@@ -1,10 +1,3 @@
-/* effort */
-#include <Q2HX711.h>
-int masse;
-const byte hx711_data_pin = 23;
-const byte hx711_clock_pin = 18;
-Q2HX711 hx711(hx711_data_pin, hx711_clock_pin);
-
 /* inductif */
 const int capteur_inductif = 13;
 bool est_inductif;
