@@ -200,6 +200,17 @@ void splash_wifi_send_text() {
   String display_matiere = "matiere: " + String(matiere);
 
   display_text_top("WiFi: envoi en cours");
+  display_text_normal("envoi des donnees au serveur en cours...", 1);
+  delay(delay_ecran);
+}
+
+void splash_weight_text() {
+  clear_display();
+
+  String display_masse = "masse:   " + String(masse);
+  String display_matiere = "matiere: " + String(matiere);
+
+  display_text_top("Acquisition de masse");
   display_text_normal(display_masse, 1);
   display_text_normal(display_matiere, 2);
   delay(delay_ecran);

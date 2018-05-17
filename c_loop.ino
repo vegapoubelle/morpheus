@@ -7,5 +7,6 @@
 
 void loop() {
   tri();
+  splash_weight_text();
   connect_server();
 }
