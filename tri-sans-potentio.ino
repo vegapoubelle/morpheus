@@ -1,7 +1,3 @@
-/* inductif */
-const int capteur_inductif = 13;
-bool est_inductif;
-
 /* SETUP */
 void setup() {
 	Serial.begin(9600);
@@ -41,16 +37,6 @@ void tri() {
 			Serial.println();
 		}
 	}
-}
-
-/* function to test if it's a metal or not */
-bool test_inductif() {
-	if (digitalRead(capteur_inductif) == 1)
-		est_inductif = true;
-	else
-		est_inductif = false;
-
-	return est_inductif;
 }
 
 /* print the current weight */

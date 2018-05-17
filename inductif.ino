@@ -5,11 +5,12 @@
 
 */
 
-void test_inductif() {
+/* function to test if it's a metal or not */
+bool test_inductif() {
+	if (digitalRead(capteur_inductif) == 1)
+		est_inductif = true;
+	else
+		est_inductif = false;
 
-  if (digitalRead(capteur_inductif) == 1) {
-    matiere = 1;
-  } else {
-    /* set matiere to something else */
-  }
+	return est_inductif;
 }
