@@ -245,5 +245,5 @@ void splash_weight_text() {
       break;
   }
 
-  delay(delay_ecran * 2);
+  delay(delay_ecran * 1.5);
 }
