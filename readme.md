@@ -21,6 +21,10 @@ le programme de la poubelle pour l'esp32
 
 * <https://github.com/laurb9/StepperDriver>
 
+### servo moteur
+
+* <https://github.com/jkb-git/ESP32Servo>
+
 ## l'équipe
 
 | [@bideabiere](https://github.com/bideabiere) | [@darkbenjo](https://github.com/darkbenjo) | [@Guehendek](https://github.com/Guehendek) | [@x4m3](https://github.com/x4m3) |
