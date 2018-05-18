@@ -6,4 +6,4 @@
 */
 
 String codename = "morpheus";
-String version = "0.0.2";
+String version = "0.0.3";
