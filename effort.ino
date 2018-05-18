@@ -11,6 +11,6 @@ Q2HX711 hx711(hx711_data_pin, hx711_clock_pin);
 
 /* function to get the current weight */
 int test_effort() {
-	masse = ((hx711.read()/100-84406)/10)-666;
+	masse = (hx711.read()-9103100)/1008-2;
 	return masse;
 }
