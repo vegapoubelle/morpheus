@@ -173,6 +173,7 @@ void splash_wifi_init_text() {
 
   display_text_top("WiFi: connection");
   display_text_normal("connection en cours", 1);
+  display_text_normal("veuillez patienter...", 2);
   display_text_normal("pas de connection?", 3);
   display_text_normal("verifier reseau puis", 4);
   display_text_normal("redemarer la poubelle", 5);
