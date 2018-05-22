@@ -12,7 +12,7 @@ char const *host = "poubelle.online";
 const int port = 80;
 
 /* matiere et masse */
-int masse;
+long masse;
 
 /*
  * 1: metal
