@@ -176,9 +176,7 @@ void splash_wifi_init_text() {
   display_text_normal("pas de connection?", 3);
   display_text_normal("verifier reseau puis", 4);
   display_text_normal("redemarer la poubelle", 5);
-  delay(delay_ecran);
-  /* additional delay to let people read what's on the screen */
-  delay(500);
+  delay(delay_ecran * 1.25);
 }
 
 void splash_wifi_connected_text() {
