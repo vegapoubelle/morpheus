@@ -47,12 +47,19 @@ void loop()
 	{  digitalWrite(avance, HIGH);
 		delay(2);
 		compt_temps++;
-		if ( analogRead(A5) > 1427 )  //détection obstacle si tension A5 > 1.15V
+		if ( analogRead(A5) > 650 )  //détection obstacle si tension A5 > 1.15V
+      {
+      Serial.println (analogRead(A5));
 			obstacle = true;
+      }
 		if ( obstacle == false )
-			ledcWrite( LEDC_CHANNEL_0, 6500);   //sortie petite vitesse
+      {
+			ledcWrite( LEDC_CHANNEL_0, 6500); //sortie petite vitesse
+      }
 		else
+      {
 			ledcWrite( LEDC_CHANNEL_0, 8191);   //sortie vitesse max
+      }
 		if ( digitalRead(inductif) == HIGH)
 			matiere =1;  //déchet métalique
 		if (analogRead(A4) > 4000) //si curseur complètement sortie
@@ -73,13 +80,16 @@ void loop()
 
 	while ( matiere ==0 )    //***********************************************************2ème sortie Palpeur
 	{  digitalWrite(avance, HIGH);
-		ledcWrite( LEDC_CHANNEL_0, 6500);   //sortie petite vitesse
-		if ( analogRead(A5) > 1427 )  //détection obstacle si tension A5 > 1.15V
+		ledcWrite( LEDC_CHANNEL_0, 6000);   //sortie petite vitesse
+    Serial.println (analogRead(A5));
+		if ( analogRead(A5) > 1010)  //détection obstacle si tension A5 > 1.15V
 		{  position1 = analogRead(A4);
 			ledcWrite( LEDC_CHANNEL_0, 8191);   //sortie vitesse max
-			delay(500);
+			delay(350);
 			position2 = analogRead(A4);
-			if (position2 > position1 + 20)
+      position1 = position1 + 8; 
+      position2 = position2 + 1;
+			if (position2  > position1)
 			matiere = 4; // détection plastique ou carton
 			else
 			matiere = 3; // détection verre
