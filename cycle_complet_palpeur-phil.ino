@@ -13,9 +13,12 @@
 // use 5000 Hz as a LEDC base frequency
 #define LEDC_BASE_FREQ     10000
 
-void tri_potentio()
-{
-  while( digitalRead(BP) == LOW)   //Attendre action sur BP (court-circuiter le bornier origine moteur avec un fil)
+void tri_potentio() {
+  /* dont do anything if the weight is under 0 grams */
+  while (test_effort() <= 0) {
+    splash_weight_waiting_text();
+    show_weight();
+  }
 
   matiere = 0;
   compt_temps = 0;
