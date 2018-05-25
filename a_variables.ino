@@ -52,7 +52,7 @@ const int avance = 17;
 const int arriere = 16;
 
 /* sortie PWM avec LedC pour variation de vitesse */
-const int Enable = 4;
+const int enable = 4;
 
 /* detection augmentation du courant moteur du palpeur */
 boolean obstacle = false;
