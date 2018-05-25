@@ -39,7 +39,7 @@ void tri_potentio() {
     if (digitalRead(capteur_inductif) == HIGH)
       matiere = 1; // déchet métalique
     if (analogRead(A4) > 4000) // si curseur complètement sortie
-      matiere = 2; // autre déchet
+      matiere = 4; // autre déchet
   }
 
   digitalWrite(avance, LOW); /* Arrêt moteur */
@@ -67,9 +67,9 @@ void tri_potentio() {
       position1 = position1 + 8;
       position2 = position2 + 1;
       if (position2 > position1)
-        matiere = 4; // détection plastique ou carton
+        matiere = 3; // détection plastique ou carton
       else
-        matiere = 3; // détection verre
+        matiere = 2; // détection verre
       Serial.print("position1 :");
       Serial.println(position1);
       Serial.print("position2 :");
