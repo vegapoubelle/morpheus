@@ -21,48 +21,47 @@ void loop()
 	compt_temps = 0;
 	obstacle = false;
 
-	while ( (matiere ==0) && (compt_temps <500) ) /*1ère sortie Palpeur */
+	while ( (matiere ==0) && (compt_temps <500) ) /* 1ère sortie Palpeur */
 	{  digitalWrite(avance, HIGH);
 		delay(2);
 		compt_temps++;
-		if ( analogRead(A5) > 650 )  //détection obstacle si tension A5 > 1.15V
+		if ( analogRead(A5) > 650 )  // détection obstacle si tension A5 > 1.15V
       {
       Serial.println (analogRead(A5));
 			obstacle = true;
       }
 		if ( obstacle == false )
       {
-			ledcWrite( LEDC_CHANNEL_0, 6500); //sortie petite vitesse
+			ledcWrite( LEDC_CHANNEL_0, 6500); // sortie petite vitesse
       }
 		else
       {
-			ledcWrite( LEDC_CHANNEL_0, 8191);   //sortie vitesse max
+			ledcWrite( LEDC_CHANNEL_0, 8191); // sortie vitesse max
       }
 		if ( digitalRead(capteur_inductif) == HIGH)
-			matiere =1;  //déchet métalique
-		if (analogRead(A4) > 4000) //si curseur complètement sortie
-			matiere =2;   //autre déchet
+			matiere =1;  // déchet métalique
+		if (analogRead(A4) > 4000) // si curseur complètement sortie
+			matiere =2;   // autre déchet
 	}
-	digitalWrite(avance, LOW);  /*Arrêt moteur */
-	ledcWrite( LEDC_CHANNEL_0, 0);   //rapport cyclique de 0 à 8191
+	digitalWrite(avance, LOW);  /* Arrêt moteur */
+	ledcWrite( LEDC_CHANNEL_0, 0);   // rapport cyclique de 0 à 8191
 	delay(500);
 
 	while ( analogRead(A4) > 100 ) /* Rentrée Palpeur */
 	{  digitalWrite(arriere, HIGH);
-		ledcWrite( LEDC_CHANNEL_0, 6500);   //rapport cyclique de 0 à 8191 (6000 est le minimum pour déplacer le curseur)
+		ledcWrite( LEDC_CHANNEL_0, 6500);   // rapport cyclique de 0 à 8191 (6000 est le minimum pour déplacer le curseur)
 	}
 	digitalWrite(arriere, LOW); /* Arrêt moteur */
-	ledcWrite( LEDC_CHANNEL_0, 0);   //rapport cyclique de 0 à 8191
+	ledcWrite( LEDC_CHANNEL_0, 0);   // rapport cyclique de 0 à 8191
 	delay(500);
-
 
 	while ( matiere ==0 ) /* 2ème sortie Palpeur */
 	{  digitalWrite(avance, HIGH);
-		ledcWrite( LEDC_CHANNEL_0, 6000);   //sortie petite vitesse
+		ledcWrite( LEDC_CHANNEL_0, 6000);   // sortie petite vitesse
     Serial.println (analogRead(A5));
-		if ( analogRead(A5) > 1010)  //détection obstacle si tension A5 > 1.15V
+		if ( analogRead(A5) > 1010)  // détection obstacle si tension A5 > 1.15V
 		{  position1 = analogRead(A4);
-			ledcWrite( LEDC_CHANNEL_0, 8191);   //sortie vitesse max
+			ledcWrite( LEDC_CHANNEL_0, 8191);   // sortie vitesse max
 			delay(350);
 			position2 = analogRead(A4);
       position1 = position1 + 8;
@@ -79,16 +78,16 @@ void loop()
 		}
 	}
 	digitalWrite(avance, LOW); /* Arrêt moteur */
-	ledcWrite( LEDC_CHANNEL_0, 0);   //rapport cyclique de 0 à 8191
+	ledcWrite( LEDC_CHANNEL_0, 0);   // rapport cyclique de 0 à 8191
 	delay(500);
 
 
 	while ( analogRead(A4) > 100 ) /* Rentrée Palpeur */
 	{  digitalWrite(arriere, HIGH);
-		ledcWrite( LEDC_CHANNEL_0, 6500);   //rapport cyclique de 0 à 8191 (6000 est le minimum pour déplacer le curseur)
+		ledcWrite( LEDC_CHANNEL_0, 6500);   // rapport cyclique de 0 à 8191 (6000 est le minimum pour déplacer le curseur)
 	}
 	digitalWrite(arriere, LOW);  /* Arrêt moteur */
-	ledcWrite( LEDC_CHANNEL_0, 0);   //rapport cyclique de 0 à 8191
+	ledcWrite( LEDC_CHANNEL_0, 0);   // rapport cyclique de 0 à 8191
 
 	Serial.print("matiere detectee :");
 	switch (matiere) {
