@@ -15,14 +15,21 @@ void setup() {
   init_moteur();
 
   /* potentiometre */
+
+  /* use first channel of 16 channels (started from zero) */
+  #define LEDC_CHANNEL_0 0
+
+  #define LEDC_TIMER_13_BIT 13
+
+  /* use 5000 Hz as a LEDC base frequency */
+  #define LEDC_BASE_FREQ 10000
+
   pinMode(avance, OUTPUT);
   pinMode(arriere, OUTPUT);
   digitalWrite(avance, LOW);
   digitalWrite(arriere, LOW);
   ledcSetup(LEDC_CHANNEL_0, LEDC_BASE_FREQ, LEDC_TIMER_13_BIT);
   ledcAttachPin(enable, LEDC_CHANNEL_0);
-
-  pinMode(BP, INPUT); //ATTENTION cette entrée sera utilisée plus tard comme capteur origine moteur de rotation
 
   /* esp: wait for garbage to go away */
   delay(500);
