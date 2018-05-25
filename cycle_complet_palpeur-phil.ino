@@ -21,7 +21,7 @@ void loop()
 	compt_temps = 0;
 	obstacle = false;
 
-	while ( (matiere ==0) && (compt_temps <500) )    //*****************************************1ère sortie Palpeur
+	while ( (matiere ==0) && (compt_temps <500) ) /*1ère sortie Palpeur */
 	{  digitalWrite(avance, HIGH);
 		delay(2);
 		compt_temps++;
@@ -43,20 +43,20 @@ void loop()
 		if (analogRead(A4) > 4000) //si curseur complètement sortie
 			matiere =2;   //autre déchet
 	}
-	digitalWrite(avance, LOW);  //*******Arrêt moteur
+	digitalWrite(avance, LOW);  /*Arrêt moteur */
 	ledcWrite( LEDC_CHANNEL_0, 0);   //rapport cyclique de 0 à 8191
 	delay(500);
 
-	while ( analogRead(A4) > 100 )    //****************************************************Rentrée Palpeur
+	while ( analogRead(A4) > 100 ) /* Rentrée Palpeur */
 	{  digitalWrite(arriere, HIGH);
 		ledcWrite( LEDC_CHANNEL_0, 6500);   //rapport cyclique de 0 à 8191 (6000 est le minimum pour déplacer le curseur)
 	}
-	digitalWrite(arriere, LOW);  //*******Arrêt moteur
+	digitalWrite(arriere, LOW); /* Arrêt moteur */
 	ledcWrite( LEDC_CHANNEL_0, 0);   //rapport cyclique de 0 à 8191
 	delay(500);
 
 
-	while ( matiere ==0 )    //***********************************************************2ème sortie Palpeur
+	while ( matiere ==0 ) /* 2ème sortie Palpeur */
 	{  digitalWrite(avance, HIGH);
 		ledcWrite( LEDC_CHANNEL_0, 6000);   //sortie petite vitesse
     Serial.println (analogRead(A5));
@@ -78,16 +78,16 @@ void loop()
 			Serial.println(position2);
 		}
 	}
-	digitalWrite(avance, LOW); //*******Arrêt moteur
+	digitalWrite(avance, LOW); /* Arrêt moteur */
 	ledcWrite( LEDC_CHANNEL_0, 0);   //rapport cyclique de 0 à 8191
 	delay(500);
 
 
-	while ( analogRead(A4) > 100 )    //*****************************************************Rentrée Palpeur
+	while ( analogRead(A4) > 100 ) /* Rentrée Palpeur */
 	{  digitalWrite(arriere, HIGH);
 		ledcWrite( LEDC_CHANNEL_0, 6500);   //rapport cyclique de 0 à 8191 (6000 est le minimum pour déplacer le curseur)
 	}
-	digitalWrite(arriere, LOW);  //*******Arrêt moteur
+	digitalWrite(arriere, LOW);  /* Arrêt moteur */
 	ledcWrite( LEDC_CHANNEL_0, 0);   //rapport cyclique de 0 à 8191
 
 	Serial.print("matiere detectee :");
