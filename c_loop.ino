@@ -6,7 +6,8 @@
 */
 
 void loop() {
-  tri();
+  /* tri(); sans le palpeur */
+  tri_potentio();
   splash_weight_text();
   connect_server();
 }
