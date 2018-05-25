@@ -33,7 +33,7 @@ bool est_inductif;
 const byte hx711_data_pin = 23;
 const byte hx711_clock_pin = 18;
 
-/* moteur */
+/* moteur pas a pas */
 #define MOTOR_STEPS 200
 #define RPM 120
 #define MICROSTEPS 1
