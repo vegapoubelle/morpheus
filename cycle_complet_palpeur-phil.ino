@@ -1,10 +1,17 @@
+/*
+   cycle_complet_palpeur.ino: cycle de tri avec le palpeur
+
+   http://poubelle.online
+
+*/
+
 // use first channel of 16 channels (started from zero)
 #define LEDC_CHANNEL_0     0
 
 #define LEDC_TIMER_13_BIT  13
 
 // use 5000 Hz as a LEDC base frequency
-#define LEDC_BASE_FREQ     10000    //Dans l'exemple la fréquence de 5000 produisait un bruit important dans le moteur
+#define LEDC_BASE_FREQ     10000
 
 void loop()
 {
