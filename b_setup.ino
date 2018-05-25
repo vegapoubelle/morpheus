@@ -11,7 +11,7 @@ void setup() {
   /* capteur inductif */
   pinMode(capteur_inductif, INPUT);
 
-  /* moteur */
+  /* moteur pas a pas */
   init_moteur();
 
   /* potentiometre */
