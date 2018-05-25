@@ -3,7 +3,7 @@
 
    http://poubelle.online
 
- */
+*/
 
 // use first channel of 16 channels (started from zero)
 #define LEDC_CHANNEL_0 0
