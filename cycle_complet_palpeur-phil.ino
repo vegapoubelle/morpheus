@@ -24,12 +24,12 @@ void tri_potentio() {
   compt_temps = 0;
   obstacle = false;
 
-  while ((matiere ==0) && (compt_temps <500)) { /* 1ère sortie Palpeur */
+  while ((matiere == 0) && (compt_temps < 500)) { /* 1ère sortie Palpeur */
     digitalWrite(avance, HIGH);
     delay(2);
     compt_temps++;
     if (analogRead(A5) > 650) { // détection obstacle si tension A5 > 1.15V
-      Serial.println (analogRead(A5));
+      Serial.println(analogRead(A5));
       obstacle = true;
     }
     if (obstacle == false)
@@ -37,9 +37,9 @@ void tri_potentio() {
     else
       ledcWrite(LEDC_CHANNEL_0, 8191); // sortie vitesse max
     if (digitalRead(capteur_inductif) == HIGH)
-      matiere =1; // déchet métalique
+      matiere = 1; // déchet métalique
     if (analogRead(A4) > 4000) // si curseur complètement sortie
-      matiere =2; // autre déchet
+      matiere = 2; // autre déchet
   }
 
   digitalWrite(avance, LOW); /* Arrêt moteur */
