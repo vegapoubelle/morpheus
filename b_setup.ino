@@ -14,6 +14,16 @@ void setup() {
   /* moteur */
   init_moteur();
 
+  /* potentiometre */
+  pinMode(avance, OUTPUT);
+  pinMode(arriere, OUTPUT);
+  digitalWrite(avance, LOW);
+  digitalWrite(arriere, LOW);
+  ledcSetup(LEDC_CHANNEL_0, LEDC_BASE_FREQ, LEDC_TIMER_13_BIT);
+  ledcAttachPin(Enable, LEDC_CHANNEL_0);
+
+  pinMode(BP, INPUT); //ATTENTION cette entrée sera utilisée plus tard comme capteur origine moteur de rotation
+
   /* esp: wait for garbage to go away */
   delay(500);
   Serial.println("");

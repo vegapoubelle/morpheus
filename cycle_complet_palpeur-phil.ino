@@ -6,20 +6,6 @@
 // use 5000 Hz as a LEDC base frequency
 #define LEDC_BASE_FREQ     10000    //Dans l'exemple la fréquence de 5000 produisait un bruit important dans le moteur
 
-void setup() {
-
-	Serial.begin(115200);
-
-	pinMode(avance, OUTPUT);
-	pinMode(arriere, OUTPUT);
-	digitalWrite(avance, LOW);
-	digitalWrite(arriere, LOW);
-	ledcSetup(LEDC_CHANNEL_0, LEDC_BASE_FREQ, LEDC_TIMER_13_BIT);
-	ledcAttachPin(Enable, LEDC_CHANNEL_0);
-
-	pinMode(BP, INPUT); //ATTENTION cette entrée sera utilisée plus tard comme capteur origine moteur de rotation
-}
-
 void loop()
 {
 	while( digitalRead(BP) == LOW)   //Attendre action sur BP (court-circuiter le bornier origine moteur avec un fil)
