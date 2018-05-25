@@ -1,18 +1,3 @@
-
-const int avance = 17;
-const int arriere = 16;
-const int Enable = 4;   //sortie PWM avec LedC pour faire varier la vitesse
-//potentiomètre palpeur sur A4
-//courant palpeur sur A5
-const int BP = 25;     //ATTENTION cette entrée sera utilisée plus tard comme capteur origine moteur de rotation
-const int capteur_inductif = 13;
-
-int matiere=0;   // 0: matiere pas encore détectée / 1: metal / 2: autre dechet / 3:verre / 4:plastique ou carton
-boolean obstacle=false;  // detection augmentation du courant moteur du palpeur
-int compt_temps=0;
-int position1;  //mémorisation de la première position du palpeur au moment de la détection d'obstacle
-int position2;  //mémorisation de la deuxième position du palpeur 0.5s en vitesse max après la détection d'obstacle
-
 // use first channel of 16 channels (started from zero)
 #define LEDC_CHANNEL_0     0
 
