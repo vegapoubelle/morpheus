@@ -5,13 +5,13 @@ const int Enable = 4;   //sortie PWM avec LedC pour faire varier la vitesse
 //potentiomètre palpeur sur A4
 //courant palpeur sur A5
 const int BP = 25;     //ATTENTION cette entrée sera utilisée plus tard comme capteur origine moteur de rotation
-const int inductif = 13;
+const int capteur_inductif = 13;
 
 int matiere=0;   // 0: matiere pas encore détectée / 1: metal / 2: autre dechet / 3:verre / 4:plastique ou carton
 boolean obstacle=false;  // detection augmentation du courant moteur du palpeur
 int compt_temps=0;
 int position1;  //mémorisation de la première position du palpeur au moment de la détection d'obstacle
-int position2;  //mémorisation de la deuxième position du palpeur 0.5s en vitesse max après la détection d'obstacle   
+int position2;  //mémorisation de la deuxième position du palpeur 0.5s en vitesse max après la détection d'obstacle
 
 // use first channel of 16 channels (started from zero)
 #define LEDC_CHANNEL_0     0
@@ -35,9 +35,9 @@ void setup() {
 	pinMode(BP, INPUT); //ATTENTION cette entrée sera utilisée plus tard comme capteur origine moteur de rotation
 }
 
-void loop() 
+void loop()
 {
-	while( digitalRead(BP) == LOW)   //Attendre action sur BP (court-circuiter le bornier origine moteur avec un fil) 
+	while( digitalRead(BP) == LOW)   //Attendre action sur BP (court-circuiter le bornier origine moteur avec un fil)
 
 	matiere = 0;
 	compt_temps = 0;
@@ -60,7 +60,7 @@ void loop()
       {
 			ledcWrite( LEDC_CHANNEL_0, 8191);   //sortie vitesse max
       }
-		if ( digitalRead(inductif) == HIGH)
+		if ( digitalRead(capteur_inductif) == HIGH)
 			matiere =1;  //déchet métalique
 		if (analogRead(A4) > 4000) //si curseur complètement sortie
 			matiere =2;   //autre déchet
@@ -87,7 +87,7 @@ void loop()
 			ledcWrite( LEDC_CHANNEL_0, 8191);   //sortie vitesse max
 			delay(350);
 			position2 = analogRead(A4);
-      position1 = position1 + 8; 
+      position1 = position1 + 8;
       position2 = position2 + 1;
 			if (position2  > position1)
 			matiere = 4; // détection plastique ou carton
