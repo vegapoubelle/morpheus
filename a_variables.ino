@@ -40,14 +40,25 @@ const byte hx711_clock_pin = 18;
 #define DIR 15
 #define STEP 2
 
-/* potentiometre et palpeur */
+/* potentiometre et palpeur
+ *
+ * fyi:
+ * le potentiometre palpeur est sur A4
+ * le courant palpeur est sur A5
+ */
+
+/* broches pour faire avancer le moteur */
 const int avance = 17;
 const int arriere = 16;
-const int Enable = 4;   //sortie PWM avec LedC pour faire varier la vitesse
-//potentiomètre palpeur sur A4
-//courant palpeur sur A5
-const int BP = 25;     //ATTENTION cette entrée sera utilisée plus tard comme capteur origine moteur de rotation
-boolean obstacle=false;  // detection augmentation du courant moteur du palpeur
+
+/* sortie PWM avec LedC pour variation de vitesse */
+const int Enable = 4;
+
+/* detection augmentation du courant moteur du palpeur */
+boolean obstacle = false;
+
+/* compteur de temps */
 int compt_temps=0;
-int position1;  //mémorisation de la première position du palpeur au moment de la détection d'obstacle
-int position2;  //mémorisation de la deuxième position du palpeur 0.5s en vitesse max après la détection d'obstacle
+
+/* memorisation de la premiere et seconde position du palpeur */
+int position1, position2;
