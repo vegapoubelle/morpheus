@@ -6,12 +6,12 @@
  */
 
 // use first channel of 16 channels (started from zero)
-#define LEDC_CHANNEL_0     0
+#define LEDC_CHANNEL_0 0
 
-#define LEDC_TIMER_13_BIT  13
+#define LEDC_TIMER_13_BIT 13
 
 // use 5000 Hz as a LEDC base frequency
-#define LEDC_BASE_FREQ     10000
+#define LEDC_BASE_FREQ 10000
 
 void tri_potentio() {
   /* dont do anything if the weight is under 0 grams */
