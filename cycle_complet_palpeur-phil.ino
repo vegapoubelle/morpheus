@@ -91,16 +91,28 @@ void tri_potentio() {
   Serial.print("matiere detectee :");
   switch (matiere) {
     case 1:
+      show_weight();
+      Serial.println();
       Serial.println("metal");
+      Serial.println();
       break;
     case 2:
-      Serial.println("autre");
+      show_weight();
+      Serial.println();
+      Serial.println("verre");
+      Serial.println();
       break;
     case 3:
-      Serial.println("verre");
+      show_weight();
+      Serial.println();
+      Serial.println("plastique");
+      Serial.println();
       break;
     case 4:
-      Serial.println("plastique");
+      show_weight();
+      Serial.println();
+      Serial.println("autre");
+      Serial.println();
       break;
   }
 }
