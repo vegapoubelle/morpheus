@@ -139,7 +139,6 @@ void display_text_normal(String text, int line) {
       display.setCursor(0, 52);
       break;
   }
-
   display.setTextSize(1);
   display.setTextColor(WHITE);
   display.println(text);
