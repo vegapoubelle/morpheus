@@ -88,7 +88,7 @@ const unsigned char logo [] PROGMEM = {
 #endif
 
 void init_display() {
-  /* generate the high voltage from the 3.3v line internally */
+  /* give the address on the i2c bus */
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
   Serial.println("lcd: started");
 }
